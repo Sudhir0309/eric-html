@@ -117,4 +117,6 @@ footer h3{ font-size:1.33em;}
     .navbar .navbar-nav .nav-link .icon img{ width: 15px;}
     .navbar-brand img{width: 152px;}
     .table-bg th, .table-bg td{ font-size: 16px;}
+    .hero .yellow-col .comment-arrow{right:inherit; left: -50px;}
+    .hero .yellow-col img{ width: 50px; }
 }
