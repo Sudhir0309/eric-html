@@ -7,6 +7,7 @@ body{font-size: 0.93vw; line-height: 1.44vw;}
 h1{ font-family: "Playfair Display", serif; font-size: 7.11em; line-height:1.2em; font-weight: 400;}
 .lead{ font-size: 1.33em; ; line-height: 1.25em; font-family: "Roboto", sans-serif; font-weight: 400;}
 h2{font-family: "Playfair Display", serif; font-size: 2.67em; line-height:1.08em; margin-bottom: 0.67em;}
+.tenverto-col h2{ font-family: "Anek Gurmukhi", sans-serif; font-weight: 700;}
 h3{ font-size: 1.88em; line-height: 1.07em;}
 h4{ font-size: 1.25em; list-style: 1.1em;}
 .btn{ list-style: 1.56em; font-weight: 500;}
@@ -44,6 +45,7 @@ h4{ font-size: 1.25em; list-style: 1.1em;}
 /* .navbar{position:absolute;bottom: 0;} */
 .navbar .navbar-nav{ padding:1.35em 0}
 .navbar .navbar-nav .nav-link{font-family: "Roboto Condensed", sans-serif; font-size: 1.33em; line-height: 1.23em; }
+.navbar .navbar-nav .nav-link:hover{  text-decoration: underline; text-decoration-color: #FFE500 !important; text-decoration-thickness: 3px !important;}
 .navbar .navbar-nav .nav-link .icon img{ width: 1.25vw;}
 .section-col{ padding: 5.20vw 0;}
 .testimonial .icon img{ width: 4.4vw;}
@@ -106,8 +108,8 @@ footer h3{ font-size:1.33em;}
     footer h3{ font-size: 23px;}
     .testimonial  h2{ font-size: 26px;}
     .skill-col .icon img{width: 70px;}
-    .tenverto-col .person {width: 312px;}
-    .career-col .list-col{padding-left: 55px;}
+    .tenverto-col .person {width: 312px; padding-top: 15px;}
+    .career-col .list-col{padding-left: 55px;}  
     .ipad-img{ width: 100% !important;}
     footer .section-col{ padding: 110px 0;}
     .pattran{ height: 65px;}
