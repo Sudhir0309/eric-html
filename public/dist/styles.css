@@ -6,6 +6,273 @@
  * ------
  They have to be referrenced relative to this file (_index.scss), so url(./_img/...)
 */
-body {
-  border: 10px solid red;
+@layer base {
+  :root {
+    --website-spacing-top-gap: 20px;
+  }
+  * {
+    transition: all 0.3s ease; /* Adjust the duration and timing function as needed */
+  }
+  @media (min-width: 1400px) {
+    body {
+      --website-spacing-section-h-small: 120px;
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    body {
+      --website-spacing-section-h-small: 90px;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    body {
+      --website-spacing-section-h-small: 70px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    body {
+      --website-spacing-section-h-small: 60px;
+    }
+  }
+  @layer blocks {
+    .sc-block {
+      padding-top: var(--website-spacing-section-h-small);
+      padding-bottom: var(--website-spacing-section-h-small);
+    }
+    .sc-block-mg-top {
+      margin-top: var(--website-spacing-section-h-small);
+    }
+    .sc-block-mg-bot {
+      margin-bottom: var(--website-spacing-section-h-small);
+    }
+    .sc-block-pd-top {
+      padding-top: var(--website-spacing-section-h-small);
+    }
+    .sc-block-pd-bot {
+      padding-bottom: var(--website-spacing-section-h-small);
+    }
+  }
+  @layer blocks {}
+  :root {
+    --website-fs-h1: 32px;
+    --website-ln-h1: 34px;
+    --website-fs-h2: 24px;
+    --website-ln-h2: 28px;
+    --website-fs-h3: 20px;
+    --website-ln-h3: 27px;
+    --website-fs-h4: 18px;
+    --website-ln-h4: 24px;
+    --website-mb-h1: 8px;
+    --website-mb-h2: 10px;
+    --website-mb-h3: 10px;
+  }
+  /**
+   * INITIALIZATION
+   * ---------------------------------------------
+  */
+  body {
+    -webkit-font-smoothing: antialiased; /* For Chrome, Safari, and newer versions of Edge */
+    -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
+    font-smooth: auto; /* For older versions of Edge and other browsers */
+    font-size: 1.15rem;
+    font-family: var(--website-font-body);
+    font-weight: 400;
+    font-style: normal;
+  }
+  /**
+   * TYPOGRAPHY
+   * ---------------------------------------------
+  */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--website-font-headings);
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+  }
+  @media (min-width: 1400px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      --website-fs-h1: 60px;
+      --website-ln-h1: 60px;
+      --website-fs-h2: 42px;
+      --website-ln-h2: 46px;
+      --website-fs-h3: 26.5px;
+      --website-ln-h3: 38.5px;
+      --website-fs-h4: 22px;
+      --website-ln-h4: 26px;
+      --website-mb-h2: 25px;
+      --website-mb-h3: 20.5px;
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      --website-fs-h1: 48px;
+      --website-ln-h1: 50px;
+      --website-fs-h2: 34.5px;
+      --website-ln-h2: 38.5px;
+      --website-fs-h3: 25px;
+      --website-ln-h3: 35.5px;
+      --website-fs-h4: 21px;
+      --website-ln-h4: 26px;
+      --website-mb-h2: 22px;
+      --website-mb-h3: 17.5px;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      --website-fs-h1: 40px;
+      --website-ln-h1: 44px;
+      --website-fs-h2: 30.5px;
+      --website-ln-h2: 33.5px;
+      --website-fs-h3: 24.5px;
+      --website-ln-h3: 32.5px;
+      --website-fs-h4: 20.5px;
+      --website-ln-h4: 26px;
+      --website-mb-h2: 20px;
+      --website-mb-h3: 15px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      --website-fs-h1: 40px;
+      --website-ln-h1: 44px;
+      --website-fs-h2: 30.5px;
+      --website-ln-h2: 33.5px;
+      --website-fs-h3: 24.5px;
+      --website-ln-h3: 31.5px;
+      --website-fs-h4: 20.5px;
+      --website-ln-h4: 24px;
+      --website-mb-h2: 20px;
+      --website-mb-h3: 15px;
+    }
+  }
+  h1 {
+    margin-bottom: var(--website-mb-h1);
+    font-size: var(--website-fs-h1);
+    line-height: var(--website-ln-h1);
+    letter-spacing: -0.66px;
+  }
+  h2 {
+    margin-bottom: var(--website-mb-h2);
+    font-size: var(--website-fs-h2);
+    line-height: var(--website-ln-h2);
+    letter-spacing: -0.28px;
+  }
+  h3 {
+    margin-bottom: var(--website-mb-h3);
+    font-size: var(--website-fs-h3);
+    line-height: var(--website-ln-h3);
+    letter-spacing: -0.46px;
+  }
+  h4 {
+    font-size: var(--website-fs-h4);
+    line-height: var(--website-ln-h4);
+    letter-spacing: -0.46px;
+  }
+  h3, h4 {
+    font-weight: 600;
+  }
+  /**
+   * Page Layout
+   * (for aurora backgrounds)
+   * ---------------------------------------------
+  */
+  .page-container {
+    position: relative;
+    z-index: 5;
+    /* z-index superior to 
+    .global-footer--bg-wrapper (4), 
+    .global-footer--bg-aurora (2)
+    .global-footer__quick-links (3)
+    */
+  }
+  :root {
+    --website-clr-1: #fff;
+    --website-clr-2: #080806;
+    --website-box-width-1: 759px;
+    --website-box-width-2: 650px;
+    --website-font-body: "Space Grotesk", sans-serif;
+    --website-font-headings: "Space Grotesk", sans-serif;
+    --website-fs-body: 32px;
+    --website-navbar-height: 67px;
+    --website-spacing-section-h-small: 40px;
+    --website-bdr-radius-1: 10px;
+    --website-bdr-radius-2: 20px;
+    --website-bdr-radius-3: 30px;
+    --website-icon-list-icon-dim: 36px;
+  }
+}
+section {
+  border: 5px solid purple;
+}
+
+video {
+  width: 100%;
+}
+
+.custom-icon {
+  width: 68px;
+  height: inherit;
+}
+
+@layer components {
+  @layer hero {
+    .hero {
+      background-color: var(--website-clr-2);
+    }
+    @media (min-width: 1400px) {
+      .hero {
+        border: 10px solid purple;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .hero {
+        border: 10px solid violet;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .hero {
+        border: 10px solid lime;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .hero {
+        border: 10px solid blue;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .hero {
+        border: 10px solid turquoise;
+      }
+    }
+    @media (max-width: 575px) {
+      .hero {
+        border: 10px solid chocolate;
+      }
+    }
+  }
+  @layer footer {
+    .global-footer {
+      background-color: var(--website-clr-2);
+    }
+  }
 }

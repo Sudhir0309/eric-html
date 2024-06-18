@@ -8,13 +8,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
+  <!-- General styling -->
+  <link rel="stylesheet" href="dist/styles.css" />
+
+
 
   <!--  
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="dist/styles.css" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto&family=Anek+Gurmukhi:wght@100..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -27,7 +31,7 @@
 <body>
 
 
-  <header class="hero">
+  <header class="hero sc-block-mg-bot">
     <div>
       <p>Hello, I’m Eric. I’m a<br> Creative Technologist.</p>
       <a class="link d-flex" href="#technologist">Learn More</a>
@@ -37,7 +41,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="images/eric-njanga.png" alt="Eric Njanga"></a>
+        <a class="navbar-brand text-uppercase" href="index.html">Eric Njanga</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -71,9 +75,8 @@
 
 
 
-
-  <div class="content">
-    <section id="technologist" class="banner section-col">
+ 
+    <section id="technologist" class="sc-block-mg-bot">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
@@ -84,14 +87,13 @@
               With a BA in Computer Science, I've spent over 15 years working in the field with renowned corporations
               across Canada.
             </p>
-            <a href="#ui-dev" class="btn text-uppercase">I’m first a web developer<span class="icon">
-                <image src="images/down-arrow.png" aria-label="arrow"></image>
-              </span></a>
+            <a href="#ui-dev" class="btn btn-primary">I’m first a web developer</a>
           </div>
         </div>
       </div>
     </section>
-    <section id="ui-dev" class="section-col">
+
+    <section id="ui-dev" class="sc-block-mg-bot">
       <div class="container">
         <div class="row align-items-center flex-row-reverse">
           <div class="col-lg-5">
@@ -100,20 +102,19 @@
               love for designing intuative layouts.<br><br>
               After mastering the art of creating large, scalable, and busy user interfaces, the complexity and
               challenges of designing interfaces for big enterprise applications had become something I've enjoyed.</p>
-            <a href="#ux-designer" class="btn">I’m an excellent UX Designer too <span class="icon">
-                <image src="images/down-arrow.png" aria-label="arrow"></image>
-              </span></a>
+            <a href="#ux-designer" class="btn btn-primary">I’m an excellent UX Designer too</a>
           </div>
           <div class="col-lg-7">
-            <video class="w-100 pt-5" controls="controls">
-              <source src="https://enjanga.com/wp-content/uploads/2023/07/Case-Study-1-Finished-Product.mp4"
+            <video class="" controls="controls">
+              <source src="https://tenverto.com/wp-content/uploads/2023/07/Case-Study-1-Finished-Product.mp4"
                 type="video/mp4" />
             </video>
           </div>
         </div>
       </div>
     </section>
-    <section id="ux-designer" class="section-col">
+
+    <section id="ux-designer" class="sc-block-mg-bot">
       <div class="container">
         <div class="row align-items-center ">
           <div class="col-lg-5">
@@ -125,34 +126,37 @@
               perfect blend of my UI development experience, design skills, and my desire to create custom user-centric
               solutions.
             </p>
-            <a href="#about" class="btn">My Technical experience <i><img src="images/down-arrow.png"
-                  alt="arrow"></i></a>
+            <a href="#about" class="btn btn-primary">My Technical experience</a>
           </div>
           <div class="col-lg-7">
-            <video class="w-100 pt-5" controls="controls">
-              <source src="https://enjanga.com/wp-content/uploads/2024/01/Case-Study-1-Prototyping.mp4"
+            <video class="" controls="controls">
+              <source src="https://tenverto.com/wp-content/uploads/2024/01/Case-Study-1-Prototyping.mp4"
                 type="video/mp4" />
             </video>
           </div>
         </div>
       </div>
     </section>
-    <section id="" class="testimonial section-col">
+
+    <section id="" class="sc-block-mg-bot">
       <div class="container">
-        <span class="icon d-flex justify-content-center"><img src="images/comment-icon.png"></span>
-        <h2 class="text-center">It’s more than just my passion <br>
+        <span class="icon d-flex justify-content-center"><img class="custom-icon" src="images/comment-icon.png"></span>
+
+        <blockquote class="text-center">It’s more than just my passion <br>
           for usability—it’s my desire to <br>
           create custom solutions that <br>
-          truly work for users</h2>
+          truly work for users
+        </blockquote>
       </div>
     </section>
-    <section id="about" class="section-col skill-col">
+
+    <section id="about" class="sc-block-mg-bot">
       <div class="container">
         <h2 class="section-heading text-center"><span>Technical Skills &<br class="d-block d-lg-none"> Experience</span>
         </h2>
         <div class="row">
           <div class="col-lg-5">
-            <span class="icon"><img src="images/ui-icon.png" alt="UI"></span>
+            <span class="icon"><img class="custom-icon" src="images/ui-icon.png" alt="UI"></span>
             <h3>UI Development</h3>
             <p>With expertise in front-end development, I bring extensive hands-on experience in producing flawless user
               interfaces using HTML5, CSS3, and JavaScript</p>
@@ -194,7 +198,7 @@
           </div>
           <div class="col-lg-1"></div>
           <div class="col-lg-5">
-            <span class="icon"><img src="images/technology.png" alt="Technology"></span>
+            <span class="icon"><img class="custom-icon" src="images/technology.png" alt="Technology"></span>
             <h3>UX Design</h3>
             <p>As a UX/UI designer, I've delved deep into usability for over six years, supported by six certifications
               in UX design. </p>
@@ -234,55 +238,43 @@
             </table>
           </div>
         </div>
-        <div class="d-flex justify-content-center center-btn">
-          <a href="https://www.linkedin.com/in/ericnjanga/" target="_blank" class="btn text-uppercase">Get in Touch <i
-              class=""><img src="images/Vector.png"></i></a>
-        </div>
+        <footer>
+          <a href="#who-is-eric" class="btn btn-primary">A little about me</a>
+        </footer>
       </div>
     </section>
-    <section class="section-col tenverto-col bg-light pb-0 mt-100">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2 class="tenverto">Tenverto</h2>
-            <p>Fast forward to 2023, I took the leap and launched my own consulting firm, Tenverto. </p>
-            <p>With bespoke solutions, I help transform medium to large websites into seamless, enjoyable, and highly
-              productive platforms. </p>
-            <a href="https://enjanga.com" target="_blank" class="btn text-uppercase">Visit Website <i><img
-                  src="images/up-arrow.png" alt="arrow"></i></a>
-          </div>
-          <div class="col-lg-6 text-end">
-            <img class="person" src="images/eric2.png">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-col about-col">
+
+    <section id="who-is-eric" class="sc-block-mg-bot">
       <div class="container">
         <h2 class="section-heading text-center"><span>Who is Eric?</span></h2>
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <span class="icon d-block mb-3"><img src="images/people.png" /></span>
+            <span class="icon d-block mb-3"><img class="custom-icon" src="images/people.png" /></span>
             <h3>People focused</h3>
             <p>Lorem ipsum dolor sit amet consectetur. Laoreet massa ipsum nunc in. Ornare eu eu turpis vestibulum nisi
               mauris. </p>
           </div>
           <div class="col-lg-4 col-md-6">
-            <span class="icon d-block mb-3"><img src="images/technology.png" /></span>
+            <span class="icon d-block mb-3"><img class="custom-icon" src="images/technology.png" /></span>
             <h3>Technology focused</h3>
             <p>Lorem ipsum dolor sit amet consectetur. Laoreet massa ipsum nunc in. Ornare eu eu turpis vestibulum nisi
               mauris. </p>
           </div>
           <div class="col-lg-4 col-md-6">
-            <span class="icon d-block mb-3"><img src="images/strategy.png" /></span>
+            <span class="icon d-block mb-3"><img class="custom-icon" src="images/strategy.png" /></span>
             <h3>Strategy focused</h3>
             <p>Lorem ipsum dolor sit amet consectetur. Laoreet massa ipsum nunc in. Ornare eu eu turpis vestibulum nisi
               mauris. </p>
           </div>
         </div>
       </div>
+
+      <footer>
+        <a href="#career-highlights" class="btn btn-primary">Big career moments</a>
+      </footer>
     </section>
-    <section class="section-col pt-0 career-col">
+
+    <section id="career-highlights" class="sc-block-mg-bot">
       <div class="container">
         <h2 class="section-heading text-center mb-5"><span>Career highlights</span></h2>
         <div class="row flex-row-reverse">
@@ -316,38 +308,33 @@
             </ul>
           </div>
           <div class="col-lg-6">
-            <img class="w-100 d-lg-block d-none" src="images/eric3.png" alt="" />
-            <img class="w-100 d-lg-none d-block ipad-img" src="images/ipad-img.png" alt="" />
+            <img class="img-fluid" src="images/eric3.png" alt="" />
           </div>
         </div>
       </div>
     </section>
-  </div>
+ 
 
 
-  <footer class="footer">
-    <section class="section-col">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 offset-lg-4 text-center">
-            <h3 class="text-center text-uppercase text-white mb-3"><strong>Eric Njanga</strong></h3>
-            <p class="text-white">Lorem ipsum dolor sit amet consectetur. Laoreet massa ipsum nunc in. Ornare eu eu
-              turpis vestibulum nisi mauris. Ante iaculis mauris volutpat proin dictumst sit dolor bibendum morbi. </p>
-            <ul class="d-flex justify-content-center social-link">
-              <li class="nav-item px-2">
-                <a class="nav-link fw-medium font-15 mx-2 text-white" title="Linkedin" target="_blank"
-                  href="https://www.linkedin.com/in/ericnjanga/"><i class="bi bi-linkedin"></i></a>
-              </li>
-              <li class="nav-item px-2">
-                <a class="nav-link fw-medium font-15 mx-2 text-white" title="X" target="_blank" href="#"><i
-                    class="bi bi-twitter-x"></i></a>
-              </li>
-            </ul>
-            <p class="m-0 text-white copyright">Copyright 2024, Toronto, Canada</p>
-          </div>
-        </div>
+  <footer class="global-footer sc-block">
+    <div class="container">
+      <div class="text-center">
+        <h3 class=" text-uppercase  mb-3"><strong>Eric Njanga</strong></h3>
+        <p class="">Lorem ipsum dolor sit amet consectetur. Laoreet massa ipsum nunc in. Ornare eu eu
+          turpis vestibulum nisi mauris. Ante iaculis mauris volutpat proin dictumst sit dolor bibendum morbi. </p>
+        <ul class="d-flex justify-content-center social-link">
+          <li class="nav-item px-2">
+            <a class="nav-link fw-medium font-15 mx-2 " title="Linkedin" target="_blank"
+              href="https://www.linkedin.com/in/ericnjanga/"><i class="bi bi-linkedin"></i></a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link fw-medium font-15 mx-2 " title="X" target="_blank" href="#"><i
+                class="bi bi-twitter-x"></i></a>
+          </li>
+        </ul>
+        <p class="m-0  copyright">Copyright 2024, Toronto, Canada</p>
       </div>
-    </section>
+    </div>
     <div class="pattran"></div>
   </footer>
 

@@ -1,59 +1,44 @@
 
 
 :root {
-    --website-hero-marg-top: 0;
-    --website-hero-h-margin: 0 0 15px 0;
-    --website-hero-p-font-size: 18px;
+    // --website-hero-marg-top: 0;
+    // --website-hero-h-margin: 0 0 15px 0;
+    // --website-hero-p-font-size: 18px;
 }
 
 
 @layer hero {
     .hero {
-        margin-top: var(--website-hero-marg-top);
-        max-width: var(--website-box-width-1);
-
-        h1 {
-            margin: var(--website-hero-h-margin);
-        }
-        p {
-            font-size: var(--website-hero-p-font-size);
-            color: var(--website-clr-gray-300);
-        }
-
-        p:last-of-type {
-            margin-bottom: 0;
-        }
-
+        background-color: var(--website-clr-2);
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            // border: 2px solid purple;
-            --website-hero-h-margin: 0 0 30px 0;
-            --website-hero-marg-top: 45px;
-            --website-hero-p-font-size: 24px;
+            border: 10px solid purple;
         }
-
+        
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            // border: 2px solid violet;
-            --website-hero-h-margin: 0 0 30px 0;
-            --website-hero-marg-top: 30px;
-            --website-hero-p-font-size: 24px;
+            border: 10px solid violet;
         }
-
+        
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            // border: 2px solid lime;
-            --website-hero-h-margin: 0 0 20px 0;
-            --website-hero-marg-top: 15px;
-            --website-hero-p-font-size: 22px;
+            border: 10px solid lime;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            // border: 2px solid blue;
-            --website-hero-h-margin: 0 0 20px 0;
-            --website-hero-p-font-size: 19px;
+            border: 10px solid blue;
+        }
+
+        // Small Medium screens ...
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 10px solid turquoise;
+        }
+
+        // Smaller screens ...
+        @media (max-width: (576px - 1px)) {
+            border: 10px solid chocolate;
         }
     }
 }
