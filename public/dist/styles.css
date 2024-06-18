@@ -235,28 +235,38 @@ video {
 }
 
 @layer components {
+  :root {
+    --website-hero-height: 270px;
+  }
   @layer hero {
     .hero {
       background-color: var(--website-clr-2);
     }
+    .hero .hero-content-wrapper {
+      height: var(--website-hero-height);
+    }
     @media (min-width: 1400px) {
       .hero {
         border: 10px solid purple;
+        --website-hero-height: 560px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .hero {
         border: 10px solid violet;
+        --website-hero-height: 560px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .hero {
         border: 10px solid lime;
+        --website-hero-height: 430px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .hero {
         border: 10px solid blue;
+        --website-hero-height: 430px;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {

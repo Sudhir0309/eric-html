@@ -1,6 +1,7 @@
 
 
 :root {
+    --website-hero-height: 270px;
     // --website-hero-marg-top: 0;
     // --website-hero-h-margin: 0 0 15px 0;
     // --website-hero-p-font-size: 18px;
@@ -11,24 +12,32 @@
     .hero {
         background-color: var(--website-clr-2);
 
+        .hero-content-wrapper {
+            height: var(--website-hero-height);
+        }
+
         // Extra Large screens ...
         @media (min-width: 1400px) {
             border: 10px solid purple;
+            --website-hero-height: 560px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
             border: 10px solid violet;
+            --website-hero-height: 560px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
             border: 10px solid lime;
+            --website-hero-height: 430px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             border: 10px solid blue;
+            --website-hero-height: 430px;
         }
 
         // Small Medium screens ...
