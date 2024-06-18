@@ -1,7 +1,7 @@
 {
-  "name": "Tenverto 2024",
+  "name": "Eric Njanga 2024",
   "version": "1.0.0",
-  "description": "Development repo for Tenverto 2024",
+  "description": "Development repo for Eric Njanga 2024",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

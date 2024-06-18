@@ -1,0 +1,49 @@
+
+
+
+@layer form-elts {
+    @layer buttons {
+        .btn {
+            border-radius: 0;
+            padding: 13px 25px;
+            font-weight: 500;
+        }
+        .btn.item-icon-bootstrap.item-icon-bootstrap-after,
+        .btn.item-icon-material.item-icon-material-after {
+            &::after {
+                top: 0;
+                margin-left: 10px;
+                color: var(--bs-accordion-btn-color);
+            }
+        }
+        .btn-large {
+            font-size: 1.3rem;
+        }
+        .btn-min-block {
+            min-width: 230px;  
+        }
+        .slick-arrow, //Settting carousel button as a seondary button
+        .btn-secondary {
+            border-width: 2px;
+            border-style: solid;
+        }
+        .slick-arrow {
+            display: block;
+            padding: 3px 13px;
+            font-size: 1rem;
+        }
+        .btn-transparent {
+            background-color: transparent;
+        }
+    }
+
+    @layer inputs {
+        .form-control {
+            border-radius: 0;
+            padding: 13px 12px;
+        }
+        .form-label {
+            margin-bottom: 4px;
+        }
+    }
+}

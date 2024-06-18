@@ -1,0 +1,179 @@
+:root {
+    --website-footer-grid-top-sep-grid-col: span 3;
+    --website-footer-from-wrap-grid-col: span 3;
+    --website-footer-grid-template: auto / 1fr 1fr;
+    --website-footer-form-contact-gap: 12px;
+    --website-footer-form-contact-btn-mrg: 7px auto 0 0;
+    --website-footer-form-contact-grid-template: auto / auto;
+    --website-footer-width: 100px;
+    --website-footer-form-contact-align-item: unset;
+    --website-footer-footer-copyright-flex-dir: column;
+    --website-footer-footer-copyright-gap: 5px;
+    --website-footer-footer-copyright-justify-content: unset;
+
+
+    --website-footer-social-icons-top: unset;
+    --website-footer-social-icons-fsize: unset;
+}
+
+@layer footer {
+    .global-footer {
+        .container {
+            display: grid;
+            grid-template: var(--website-footer-grid-template);
+            gap: var(--website-spacing-section-h-small);
+    
+            // Top gap ...
+            &::before {
+                display: block;
+                content: '';
+                width: 100%;
+                height: 1px;
+                grid-column: var(--website-footer-grid-top-sep-grid-col);
+            }
+        }
+        .global-footer_form-wrapper {
+            grid-column: var(--website-footer-from-wrap-grid-col);
+        }
+        .form-contact {
+            display: grid;
+            gap: var(--website-footer-form-contact-gap);
+            grid-template: var(--website-footer-form-contact-grid-template);
+    
+            .btn {
+                margin: var(--website-footer-form-contact-btn-mrg);
+            }
+        }
+        .footer-copyright {
+            display: flex;
+            flex-direction: var(--website-footer-footer-copyright-flex-dir);
+            gap: var(--website-footer-footer-copyright-gap);
+            justify-content: var(--website-footer-footer-copyright-justify-content);
+            grid-column: var(--website-footer-grid-top-sep-grid-col);
+        }
+    
+        .footer-logo {
+            img {
+                width: var(--website-footer-width);
+            }
+        }
+    
+        .list-of-social-icons {
+            position: relative;
+            top: var(--website-footer-social-icons-top);
+            li {
+                &::before,
+                &::after {
+                    font-size: var(--website-footer-social-icons-fsize);
+                }
+            }
+        }
+    
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    
+        .footer-nav {
+            line-height: 2rem;
+        }
+    
+        // Bottom background decoration...  dark-theme-footer-bg.png
+        &::after {
+            display: block;
+            content: '';
+            height: 65px;
+            width: 100%;
+            margin-top: var(--website-spacing-section-h-small);
+            background-repeat: repeat-x;
+            background-size: contain;
+        }
+    
+        // Extra Large screens ...
+        @media (min-width: 1400px) {
+            // border-left: 10px solid purple;
+            --website-footer-grid-template: auto auto auto / 50% auto auto;
+            --website-footer-grid-top-sep-grid-col: span 3;
+            --website-footer-from-wrap-grid-col: span 1;
+    
+            --website-footer-form-contact-grid-template: auto / 1fr 1fr auto;
+            --website-footer-form-contact-gap: 10px;
+            --website-footer-form-contact-align-item: end;
+            --website-footer-form-contact-btn-mrg: auto 0 0 0;
+    
+            --website-footer-footer-copyright-flex-dir: row;
+            --website-footer-footer-copyright-gap: 60px;
+            --website-footer-footer-copyright-justify-content: center;
+    
+            --website-footer-social-icons-top: -4px;
+            --website-footer-social-icons-fsize: 1.5rem;
+        }
+        
+        // Large screens ...
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            // border-left: 10px solid violet;
+            --website-footer-grid-template: auto auto auto / 50% auto auto;
+            --website-footer-grid-top-sep-grid-col: span 3;
+            --website-footer-from-wrap-grid-col: span 1;
+    
+            --website-footer-form-contact-grid-template: auto / 1fr 1fr auto;
+            --website-footer-form-contact-gap: 10px;
+            --website-footer-form-contact-align-item: end;
+            --website-footer-form-contact-btn-mrg: auto 0 0 0;
+    
+            --website-footer-footer-copyright-flex-dir: row;
+            --website-footer-footer-copyright-gap: 40px;
+            --website-footer-footer-copyright-justify-content: center;
+    
+            --website-footer-social-icons-top: -4px;
+            --website-footer-social-icons-fsize: 1.5rem;
+        }
+        
+        // Large Medium screens ...
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            // border-left: 10px solid lime;
+            --website-footer-grid-template: auto auto auto / 50% auto auto;
+            --website-footer-grid-top-sep-grid-col: span 3;
+            --website-footer-from-wrap-grid-col: span 1;
+    
+            --website-footer-form-contact-grid-template: auto / 1fr 1fr auto;
+            --website-footer-form-contact-gap: 10px;
+            --website-footer-form-contact-align-item: end;
+            --website-footer-form-contact-btn-mrg: auto 0 0 0;
+    
+            --website-footer-footer-copyright-flex-dir: row;
+            --website-footer-footer-copyright-gap: 15px;
+            --website-footer-footer-copyright-justify-content: center;
+    
+            --website-footer-social-icons-top: -4px;
+            --website-footer-social-icons-fsize: 1.5rem;
+        }
+    
+        // Medium Medium screens ...
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            // border-left: 10px solid blue;
+            --website-footer-form-contact-grid-template: auto / 1fr 1fr auto;
+            --website-footer-form-contact-gap: 10px;
+            --website-footer-form-contact-align-item: end;
+            --website-footer-form-contact-btn-mrg: auto 0 0 0;
+    
+            --website-footer-footer-copyright-flex-dir: row;
+            --website-footer-footer-copyright-gap: 10px;
+            --website-footer-footer-copyright-justify-content: unset;
+    
+            --website-footer-social-icons-top: -4px;
+            --website-footer-social-icons-fsize: 1.5rem;
+        }
+    
+        // // Small Medium screens ...
+        // @media (min-width: 576px) and (max-width: (768px - 1)) {
+        //     border-left: 10px solid turquoise;
+        // }
+    
+        // // Smaller screens ...
+        // @media (max-width: (576px - 1px)) {
+        //     border-left: 10px solid chocolate;
+        // }
+    }
+}

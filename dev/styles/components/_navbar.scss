@@ -1,0 +1,266 @@
+:root {
+    //navbar-nav
+    --website-navbar-brand-width: 100px;
+    --website-navbar-nav-display: flex;
+    --website-navbar-primlks-display: block;
+    --website-navbar-primlks-mrg-top: 0;
+    --website-navbar-primlks-font-size: inherit;
+    --website-navbar-btn-contact-padd: inherit;
+    --website-navbar-btn-contact-bdr-width: 2px;
+    --website-navbar-primlks-mrg-left: 0;
+    --website-navbar-primlks-gap: 0;
+    --website-navbar-all-navs-margin: 0; 
+ 
+    --website-navbar-nav-pdt: 10px;
+    --website-navbar-nav-width: 100%;
+    --website-navbar-nav-imlik-mrl: none;
+    --website-navbar-nav-imlik-mgt: 0;
+    --website-navbar-nav-grid-tpl: 1fr auto / 1fr 1fr;
+
+    --website-navbar-icon-l-paddl: 0;
+    --website-navbar-icon-l-paddr: 0;
+
+    --website-navbar-sl-bdr: 1px solid var(--website-clr-blue-shade-4);
+    --website-navbar-sl-display: block;
+
+    --website-navbar-list-social-icons-display: none;
+    --website-navbar-list-social-icons-pad: 0 10px;
+
+    --website-navbar-bg-col: var(--website-clr-fff);
+
+    --website-navbar-btn-theme-switch-dim: 30px;
+    --website-navbar-btn-theme-switch-mrg: 0 10px 0 auto;
+    --website-navbar-btn-theme-switch-display-mobile: inline-block;
+    --website-navbar-btn-theme-switch-display-desktop: none;
+}
+
+
+@layer navbar {
+    .navbar {
+        // Extra Large screens ...
+        @media (min-width: 1400px) {
+            // border: 3px solid purple;
+            --website-navbar-nav-imlik-mrl: auto;
+            --website-navbar-sl-bdr: 0px solid;
+            --website-navbar-primlks-display: flex;
+            --website-navbar-primlks-mrg-left: auto;
+            --website-navbar-primlks-gap: 50px;
+            --website-navbar-primlks-font-size: 20px;
+            --website-navbar-btn-contact-bdr-width: 0;
+            --website-navbar-list-social-icons-display: flex;
+            --website-navbar-sl-display: none;
+            --website-navbar-nav-pdt: 0;
+            --website-navbar-all-navs-margin: 0 0 0 5%;
+            --website-navbar-icon-l-paddl: 15px;
+            --website-navbar-icon-l-paddr: 15px;
+            --website-navbar-brand-width: 140px;
+
+            --website-navbar-btn-theme-switch-display-mobile: none;
+            --website-navbar-btn-theme-switch-display-desktop: inline-block;
+
+            --website-navbar-btn-theme-switch-mrg: 0 20px 0 auto;
+        }
+    
+        // Large screens ...
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            // border: 3px solid violet;
+            --website-navbar-nav-imlik-mrl: auto;
+            --website-navbar-sl-bdr: 0px solid;
+            --website-navbar-primlks-display: flex;
+            --website-navbar-primlks-mrg-left: auto;
+            --website-navbar-primlks-gap: 30px;
+            --website-navbar-primlks-font-size: 19px;
+            --website-navbar-btn-contact-bdr-width: 0;
+            --website-navbar-list-social-icons-display: flex;
+            --website-navbar-sl-display: none;
+            --website-navbar-nav-pdt: 0;
+            --website-navbar-all-navs-margin: 0 0 0 5%;
+            --website-navbar-icon-l-paddl: 15px;
+            --website-navbar-icon-l-paddr: 15px;
+            --website-navbar-brand-width: 140px;
+
+            --website-navbar-btn-theme-switch-display-mobile: none;
+            --website-navbar-btn-theme-switch-display-desktop: inline-block;
+
+            --website-navbar-btn-theme-switch-mrg: 0 20px 0 auto;
+        }
+
+        // Large Medium screens ...
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            // border: 3px solid lime;
+            --website-navbar-nav-imlik-mrl: auto;
+            --website-navbar-sl-bdr: 0px solid;
+            --website-navbar-primlks-display: flex;
+            --website-navbar-primlks-mrg-left: auto;
+            --website-navbar-primlks-font-size: 18px;
+            --website-navbar-btn-contact-bdr-width: 0;
+            --website-navbar-list-social-icons-display: flex;
+            --website-navbar-sl-display: none;
+            --website-navbar-nav-pdt: 0;
+            --website-navbar-all-navs-margin: 0 0 0 5%;
+            --website-navbar-icon-l-paddl: 15px;
+            --website-navbar-icon-l-paddr: 15px;
+            --website-navbar-brand-width: 120px;
+
+            --website-navbar-btn-theme-switch-display-mobile: none;
+            --website-navbar-btn-theme-switch-display-desktop: inline-block;
+        }
+
+        // Medium Medium screens ...
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            // border: 3px solid blue;
+            --website-navbar-nav-display: grid;
+            --website-navbar-sl-bdr: 0px solid;
+            --website-navbar-nav-imlik-mgt: 20px;
+            --website-navbar-all-navs-margin: 20px 0 0 0;
+            --website-navbar-brand-width: 120px;
+
+            --website-navbar-btn-theme-switch-display-mobile: inline-block;
+            --website-navbar-btn-theme-switch-display-desktop: none;
+
+            --website-navbar-btn-contact-padd: 13px 20px;
+        }
+
+        // Small Medium screens ...
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            // border: 3px solid turquoise;
+            --website-navbar-nav-display: grid;
+            --website-navbar-sl-bdr: 0px solid;
+            --website-navbar-nav-imlik-mgt: 20px;
+            --website-navbar-all-navs-margin: 20px 0 0 0;
+
+            --website-navbar-btn-theme-switch-display-mobile: inline-block;
+            --website-navbar-btn-theme-switch-display-desktop: none;
+
+            --website-navbar-btn-contact-padd: 13px 20px;
+        }
+
+        // Smaller screens ...
+        @media (max-width: (576px - 1px)) {
+            --website-navbar-btn-theme-switch-display-mobile: inline-block;
+            --website-navbar-btn-theme-switch-display-desktop: none;
+
+            --website-navbar-btn-contact-padd: 13px 20px;
+        }
+
+        .container {
+        }
+
+        .theme-toggle {
+            width: var(--website-navbar-btn-theme-switch-dim);
+            margin: var(--website-navbar-btn-theme-switch-mrg);
+
+            &-mobile {
+                display: var(--website-navbar-btn-theme-switch-display-mobile);
+            }
+            &-desktop {
+                display: var(--website-navbar-btn-theme-switch-display-desktop);
+            }
+        }
+
+        .btn-contact {
+            font-size: var(--website-navbar-primlks-font-size);
+            text-transform: uppercase;
+            padding: 9px 25px;
+
+            &::after { // Realign icon
+                top: 0;
+                font-size: 1.3rem;
+            }
+        }
+
+        .list-of-social-icons {
+            margin: var(--website-navbar-all-navs-margin);
+            padding-left: var(--website-navbar-icon-l-paddl);
+            padding-right: var(--website-navbar-icon-l-paddr);
+            display: var(--website-navbar-list-social-icons-display)!important;
+            border: 1px solid var(--website-clr-blue-shade-4);
+            border-width: 0 1px;
+
+            li {
+                margin: 0;
+                padding: var(--website-navbar-list-social-icons-pad);
+
+                &:before {
+                    top: 12px;
+                }
+                a {
+                    top: 10px; // Inherits absolute positionning from "_mixed-components.scss"
+                }
+            }
+        }
+
+        .navbar-nav {
+            padding-bottom: var(--website-navbar-nav-pdt)!important;
+        }
+
+        .navbar-nav__primary-links {
+            display: var(--website-navbar-primlks-display);
+            margin: var(--website-navbar-all-navs-margin);
+            margin-top: var(--website-navbar-primlks-mrg-top);
+            margin-left: var(--website-navbar-primlks-mrg-left);
+            gap: var(--website-navbar-primlks-gap);
+            // text-transform: uppercase;
+            // letter-spacing: 1.5px;
+            a {
+                font-size: var(--website-navbar-primlks-font-size);
+                font-weight: 500;
+            }
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+
+            padding-left: 10px;
+            padding-right: 10px;
+
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+                text-decoration: none;
+            }
+            
+            &.active {
+                text-shadow: 0 0 7px var(--website-clr-col1-accent-xx1);
+                text-decoration: underline;
+            }
+        }
+
+        .navbar-brand {
+            img {
+                width: var(--website-navbar-brand-width);
+                height: inherit;
+            }
+
+            &:hover {
+                img {
+                    opacity: .5;
+                }
+            }
+        }
+
+        .navbar-nav {
+            display: var(--website-navbar-nav-display);
+            grid-template: var(--website-navbar-nav-grid-tpl);
+            // (phone and tablets) Creates a gap between "contact us" button and the edge of the nav
+            padding-bottom: 10px; 
+            width: var(--website-navbar-nav-width);
+
+            .navbar-nav__important-link {
+                position: relative;
+                margin: var(--website-navbar-all-navs-margin);
+                .sep {
+                    position: absolute;
+                    left: -30px;
+                    top: 15px;
+                }
+            }
+        } 
+
+        .navbar-toggler {
+            border-width: 0;
+        }
+    }
+}

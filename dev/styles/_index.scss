@@ -1,0 +1,51 @@
+
+/**
+ * NOTE ON BACKGROUND IMAGES
+ * ------
+ They have to be referrenced relative to this file (_index.scss), so url(./_img/...)
+*/
+
+body {
+    border: 10px solid red;
+}
+
+// @layer framework {
+//     @import './framework/_bootstrap-override.scss';
+// }
+
+// @layer base {
+//     @import './base/initialization';
+//     @import './base/variables';
+//     @import './base/utilities';
+// }
+
+
+
+
+// @layer layouts {
+//     @import './layouts/index';
+// }
+
+
+// @layer components {
+//     // The "icons-and-more" file has to remain on top because of the 
+//     // "icon-foundation" layer that needs to be overriten by the other layers
+//     @import './components/form-elts';
+//     @import './components/icons-and-more'; 
+//     @import './components/hero';
+//     @import './components/navbar';
+//     @import './components/banners';
+//     @import './components/mixed-components';
+//     @import './components/alert';
+//     @import './components/footer';
+//     @import './components/info1-blurb';
+//     @import './components/accordion';
+//     @import './components/case-study-thumb';
+//     @import './components/navigation-articles';
+// }
+
+// @layer theming {
+//     @import './theming/theme-toggle';
+//     @import './theming/light-mode';
+//     @import './theming/dark-mode';
+// }

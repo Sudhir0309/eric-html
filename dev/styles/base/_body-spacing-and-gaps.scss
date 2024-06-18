@@ -1,0 +1,72 @@
+:root {
+    --website-spacing-top-gap: 20px;
+}
+
+* {
+  transition: all 0.3s ease; /* Adjust the duration and timing function as needed */
+}
+
+body {
+  // Creating a top gap for a the fixed navbar
+  padding-top: calc(var(--website-navbar-height) + var(--website-spacing-top-gap));
+
+    // Extra Large screens ...
+    @media (min-width: 1400px) {
+      --website-spacing-section-h-small: 120px;
+  }
+  
+  // Large screens ...
+  @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+      --website-spacing-section-h-small: 90px;
+  }
+  
+  // Large Medium screens ...
+  @media (min-width: 992px) and (max-width: (1200px - 1)) {
+      --website-spacing-section-h-small: 70px;
+  }
+
+  // Medium Medium screens ...
+  @media (min-width: 768px) and (max-width: (992px - 1)) {
+    --website-spacing-section-h-small: 60px;
+  }
+
+  // Small Medium screens ...
+  @media (min-width: 576px) and (max-width: (768px - 1)) {
+  }
+
+  // Smaller screens ...
+  @media (max-width: (576px - 1px)) {
+  }
+}
+
+
+
+@layer blocks {
+  .sc-block {
+    padding-top: var(--website-spacing-section-h-small);
+    padding-bottom: var(--website-spacing-section-h-small);
+  }
+
+  .sc-block-mg-top {
+    margin-top: var(--website-spacing-section-h-small);
+  }
+  .sc-block-mg-bot {
+    margin-bottom: var(--website-spacing-section-h-small);
+  }
+  .sc-block-pd-top {
+    padding-top: var(--website-spacing-section-h-small);
+  }
+  .sc-block-pd-bot {
+    padding-bottom: var(--website-spacing-section-h-small);
+  }
+}
+
+
+
+
+@layer blocks {
+  
+}
+
+
+

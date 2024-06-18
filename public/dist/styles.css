@@ -1,0 +1,11 @@
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./dev/styles/_index.scss ***!
+  \*****************************************************************************************************************/
+/**
+ * NOTE ON BACKGROUND IMAGES
+ * ------
+ They have to be referrenced relative to this file (_index.scss), so url(./_img/...)
+*/
+body {
+  border: 10px solid red;
+}
