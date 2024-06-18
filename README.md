@@ -1,2 +1,2 @@
 # tenverto.com
-tenverto.com HTML
+tenverto.com
