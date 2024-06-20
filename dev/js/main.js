@@ -1,31 +1,13 @@
 'use strict';
 
-if($) {
-  $('.list-design-thinkers').slick({
-    // dots: true,
-    speed: 300,
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 991, //767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-}
+import { handleViewportChange as handleViewportChange } from './videoBannerAccessibility.js';
 
+document.addEventListener('DOMContentLoaded', function () {
+  const mediaQuery = window.matchMedia('(min-width: 992px)');
 
+  // Initial check
+  handleViewportChange(mediaQuery);
 
-// import './theme-switch.js';
+  // Listen for changes in the viewport width
+  mediaQuery.addListener(handleViewportChange);
+});
