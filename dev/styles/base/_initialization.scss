@@ -82,16 +82,24 @@ body {
 // }
 
 
+h1,
+h2,
+h3,
+h4,
+h5, .btn, .navbar-brand, .speech-bubble a {
+  font-family: var(--website-font-headings); 
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: var(--website-font-headings);
   font-weight: 500;
-  font-optical-sizing: auto;
-  font-style: normal;
   font-variation-settings:
     "slnt" 0;
 

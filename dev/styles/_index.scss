@@ -5,6 +5,11 @@
  They have to be referrenced relative to this file (_index.scss), so url(./_img/...)
 */
 
+// Using layers to override bootstrap features without using "!important"
+@layer vendors {
+    @import './vendors/_bootstrap@5.3.3.min';
+}
+
 // @layer framework {
 //     @import './framework/_bootstrap-override.scss';
 // }
@@ -42,6 +47,7 @@ video {
 //     @import './components/form-elts';
 //     @import './components/icons-and-more'; 
     @import './components/hero';
+    @import './components/speech-bubble';
 //     @import './components/navbar';
 //     @import './components/banners';
 //     @import './components/mixed-components';
@@ -54,8 +60,8 @@ video {
 //     @import './components/navigation-articles';
 }
 
-// @layer theming {
+@layer theming {
 //     @import './theming/theme-toggle';
-//     @import './theming/light-mode';
+    @import './theming/light-mode';
 //     @import './theming/dark-mode';
-// }
+}

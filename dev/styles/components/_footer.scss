@@ -18,7 +18,10 @@
 
 @layer footer {
     .global-footer {
-        background-color: var(--website-clr-2);
+
+        .copyright {
+            font-size: .8rem;
+        }
         
         .container {
             // display: grid;

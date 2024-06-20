@@ -1,413 +1,409 @@
 :root {
-    --website-theme-light-bodybg-col: #F8F7F4;
-    --website-theme-light-headings-col: #301E38;
-    --website-theme-light-text-col: #462C52;
-    --website-theme-light-navbar-link-hover: var(--website-clr-col3-e75);
-    --website-theme-light-navbar-sep: #bdbdbd;
-    --website-theme-light-presentation1-sep-col: #000;
-    --website-theme-light-txt-highshine-col-1: var(--website-clr-col3-e75);
-    --website-theme-light-txt-highshine-col-2: rgb(12, 230, 12); 
+    // --website-theme-light-bodybg-col: #F8F7F4;
+    --website-theme-light-col-primary: #FFE500;
+    --website-theme-light-col-2: #080806;
+    --website-theme-light-col-2-b: #262200;
+    --website-theme-light-col-gray-1: #E3E1CC;
+    --website-theme-light-col-gray-2: #B0AE9E;
 
-    --website-theme-light-banner-shine-bgcol: var(--website-clr-col1-500);
-
-    --website-theme-light-shine-bgcol: unset; // Only necessary on dark scheme
-    --website-theme-light-banner-feature1-bgcol: var(--website-clr-feature-accent-1);
-    --website-theme-light-banner-feature2-bgcol: var(--website-clr-feature-accent-2);
-    --website-theme-light-banner-feature3-bgcol: var(--website-clr-feature-accent-3);
-
-    --website-theme-light-section-info1-hover-bgcol: var(--website-clr-col3-f7e);
-
-    --website-theme-light-footer-top-sep-col: #bdbdbd;// #a69aaf;
-
-    --website-theme-light-form-control-bdrcol: var(--website-theme-light-headings-col);
-    --website-theme-light-form-control-bgcol: var(--website-clr-fff);
-    --website-theme-light-form-label-col: #727272;
-
-    --website-theme-light-alert-info-bgcol: #cff4fc;
-
-    --website-theme-light-accordion-active-bg: var(--website-clr-col3-f7e);
-    --website-theme-light-accordion-active-bg-hover: var(--website-clr-col1-f7e);
-    --website-theme-light-accordion-bdr-col: var(--website-theme-light-footer-top-sep-col);
-    --website-theme-light-accordion-arrow-up: url(./_img/icon-light-arrow-down.png); 
-    --website-theme-light-accordion-arrow-down: url(./_img/icon-light-arrow-down.png); 
-
-    --website-theme-light-list-dashed-line-bgimg: url(./_img/list-light-dotted-line-vertical.png);
-
-    --website-theme-light-section-top-clients-badge-bgcol: #F7E5FF;
-    --website-theme-light-section-top-clients-badge-col: var(--website-theme-light-headings-col);
-
-    --website-theme-light-case-study-thumb-hover-bgcol: var(--website-theme-light-accordion-active-bg);
-    --website-theme-light-case-study-thumb-hover-col: var(--website-theme-light-navbar-link-hover);
+    --website-theme-light-headings-col: var(--website-theme-light-col-2-b);
 }
 
-html[data-theme="light"] {
-    body {
-        background-color: var(--website-theme-light-bodybg-col);
-        color: var(--website-theme-light-text-col);
-    }
+// html[data-theme="light"] {
+    // body {
+    //     background-color: var(--website-theme-light-bodybg-col);
+    //     color: var(--website-theme-light-text-col);
+    // }
 
-    @layer navbar {
-        .navbar {
-            background-color: var(--website-theme-light-bodybg-col);
-            .navbar-nav__primary-links {
+    @layer hero {
+        .hero {
+            background-color: var(--website-theme-light-col-2);
+
+            .speech-bubble {
+                background-color: var(--website-theme-light-col-primary);
+
                 a {
                     color: var(--website-theme-light-headings-col);
                 }
-            }
 
-            .logo {
-                path {
-                    fill: var(--website-theme-light-headings-col);
-                }
-                &:hover {
-                    path {
-                        fill: var(--website-theme-light-navbar-link-hover);
-                    }
-                }
-            }
-
-            .sep {
-                color: var(--website-theme-light-navbar-sep);
-            }
-
-            .nav-link {
-                &:hover {
-                    color: var(--website-theme-light-navbar-link-hover)!important;
+                // Speech bubble pointer
+                &::before {
+                    border-bottom-color: var(--website-theme-light-col-primary);
                 } 
-                &.active {
-                    color: var(--website-theme-light-navbar-link-hover)!important;
-                }
-            }
-
-            .navbar-toggler-icon {
-                background-image: url(./_img/light-theme-navbar-toggler-icon-bg.png); 
-            }
-            .navbar-toggler:focus {
-                box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) #2f2d35;
             }
         }
     }
 
-    @layer headings {
-        h1, h2, h3, h4, h5, b {
-            color: var(--website-theme-light-headings-col);
-        }
-    }
+    // @layer navbar {
+    //     .navbar {
+    //         background-color: var(--website-theme-light-bodybg-col);
+    //         .navbar-nav__primary-links {
+    //             a {
+    //                 color: var(--website-theme-light-headings-col);
+    //             }
+    //         }
 
-    @layer texts {
-        p, li {
-            color: var(--website-theme-light-text-col);
-        }
-    }
+    //         .logo {
+    //             path {
+    //                 fill: var(--website-theme-light-headings-col);
+    //             }
+    //             &:hover {
+    //                 path {
+    //                     fill: var(--website-theme-light-navbar-link-hover);
+    //                 }
+    //             }
+    //         }
 
-    @layer utilities {
-        .shinespot-col3-1 {
-            color: var(--website-theme-light-txt-highshine-col-1);
-        }
-        .shinespot-col3-2 {
-            color: var(--website-theme-light-txt-highshine-col-2);
-        }
-    }
+    //         .sep {
+    //             color: var(--website-theme-light-navbar-sep);
+    //         }
 
-    @layer buttons {
-        .btn-primary {
-            color: var(--website-clr-col3-f8f);
-            background-color: var(--website-clr-col1-300);
-            border-color: var(--website-clr-col1-300);
+    //         .nav-link {
+    //             &:hover {
+    //                 color: var(--website-theme-light-navbar-link-hover);
+    //             } 
+    //             &.active {
+    //                 color: var(--website-theme-light-navbar-link-hover);
+    //             }
+    //         }
 
-            &:hover {
-                color: var(--website-clr-dark-col3-f8f);
-                background-color: var(--website-clr-col3-ff7);
-                border-color: var(--website-clr-col1-300);
-            }
-        }
-        .slick-arrow:not(.slick-disabled), //Settting carousel button as a seondary button
-        .btn-secondary {
-            color: var(--website-theme-light-text-col);
-            background-color: transparent;
-            border-color: var(--website-theme-light-headings-col);
+    //         .navbar-toggler-icon {
+    //             background-image: url(./_img/light-theme-navbar-toggler-icon-bg.png); 
+    //         }
+    //         .navbar-toggler:focus {
+    //             box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) #2f2d35;
+    //         }
+    //     }
+    // }
 
-            &:hover {
-                color: var(--website-theme-light-text-col);
-                background-color: var(--website-theme-light-navbar-link-hover);
-                border-color: var(--website-theme-light-headings-col);
-            }
-        }
-        .slick-disabled {
-            color: var(--website-theme-light-text-col);
-            background-color: transparent;
-        }
-    }
+    // @layer headings {
+    //     h1, h2, h3, h4, h5, b {
+    //         color: var(--website-theme-light-headings-col);
+    //     }
+    // }
 
-    @layer banners {
-        @layer banner-shine {
-            .banner-shine {
-                background-color: var(--website-theme-light-banner-shine-bgcol);
-                color: var(--website-theme-light-bodybg-col);
+    // @layer texts {
+    //     p, li {
+    //         color: var(--website-theme-light-text-col);
+    //     }
+    // }
 
-                h2, p, li, .btn {
-                    color: var(--website-theme-light-bodybg-col);
-                }
-                .btn {
-                    border-color: var(--website-theme-light-bodybg-col);
-                }
-            }
-        }
+    // @layer utilities {
+    //     .shinespot-col3-1 {
+    //         color: var(--website-theme-light-txt-highshine-col-1);
+    //     }
+    //     .shinespot-col3-2 {
+    //         color: var(--website-theme-light-txt-highshine-col-2);
+    //     }
+    // }
 
-        @layer banner-feature {
-            .banner-feature {
-                &.accent-1 {
-                    background-color: var(--website-theme-light-banner-feature1-bgcol);
+    // @layer buttons {
+    //     .btn-primary {
+    //         color: var(--website-clr-col3-f8f);
+    //         background-color: var(--website-clr-col1-300);
+    //         border-color: var(--website-clr-col1-300);
 
-                    .banner-feature--img-deco {
-                        background-image: url(./_img/banner-light-frustration-free.png);
-                    }
-                }
-                &.accent-2 {
-                    background-color: var(--website-theme-light-banner-feature2-bgcol);
+    //         &:hover {
+    //             color: var(--website-clr-dark-col3-f8f);
+    //             background-color: var(--website-clr-col3-ff7);
+    //             border-color: var(--website-clr-col1-300);
+    //         }
+    //     }
+    //     .slick-arrow:not(.slick-disabled), //Settting carousel button as a seondary button
+    //     .btn-secondary {
+    //         color: var(--website-theme-light-text-col);
+    //         background-color: transparent;
+    //         border-color: var(--website-theme-light-headings-col);
 
-                    .banner-feature--img-deco {
-                        background-image: url(./_img/banner-light-what-we-do.png);
-                    }
-                }
-                &.accent-3 {
-                    background-color: var(--website-theme-light-banner-feature3-bgcol);
+    //         &:hover {
+    //             color: var(--website-theme-light-text-col);
+    //             background-color: var(--website-theme-light-navbar-link-hover);
+    //             border-color: var(--website-theme-light-headings-col);
+    //         }
+    //     }
+    //     .slick-disabled {
+    //         color: var(--website-theme-light-text-col);
+    //         background-color: transparent;
+    //     }
+    // }
 
-                    .banner-feature--img-deco {
-                        background-image: url(./_img/banner-light-our-vision.png);
-                    }
-                }
-            }
+    // @layer banners {
+    //     @layer banner-shine {
+    //         .banner-shine {
+    //             background-color: var(--website-theme-light-banner-shine-bgcol);
+    //             color: var(--website-theme-light-bodybg-col);
 
-        }
-    }
+    //             h2, p, li, .btn {
+    //                 color: var(--website-theme-light-bodybg-col);
+    //             }
+    //             .btn {
+    //                 border-color: var(--website-theme-light-bodybg-col);
+    //             }
+    //         }
+    //     }
 
-    @layer block-presentation-1 {
-        .block-presentation-1 {
-            // left border
-            &::after {
-                background: linear-gradient(to bottom, var(--website-theme-light-presentation1-sep-col), transparent 100%);
-            }
+    //     @layer banner-feature {
+    //         .banner-feature {
+    //             &.accent-1 {
+    //                 background-color: var(--website-theme-light-banner-feature1-bgcol);
 
-            // All 6 icons ...
-            &-icon1 {
-                &::before {
-                    background-image: url(./_img/icon-light-design-think-1.png);
-                }
-            }
-            &-icon2 {
-                &::before {
-                    background-image: url(./_img/icon-light-design-think-2.png);
-                }
-            }
-            &-icon3 {
-                &::before {
-                    background-image: url(./_img/icon-light-design-think-3.png);
-                }
-            }
-            &-icon4 {
-                &::before {
-                    background-image: url(./_img/icon-light-design-think-4.png);
-                }
-            }
-            &-icon5 {
-                &::before {
-                    background-image: url(./_img/icon-light-design-think-5.png);
-                }
-            }
-            &-icon6 {
-                &::before {
-                    background-image: url(./_img/icon-light-design-think-6.png);
-                }
-            }
-        }
-    }
+    //                 .banner-feature--img-deco {
+    //                     background-image: url(./_img/banner-light-frustration-free.png);
+    //                 }
+    //             }
+    //             &.accent-2 {
+    //                 background-color: var(--website-theme-light-banner-feature2-bgcol);
 
-    @layer icon-elements {
-        .list-of-custom-icons {
-            li { 
-                &::after { 
-                    color: var(--website-theme-light-text-col);
-                }
-            }
-            &.has-checked-icons { 
-                li {
-                    &::after {
-                        background-image: url(./_img/icon-light-check.png);
-                    }
-                }
-            }
-            &.has-numbered-items {
-                li {
-                    &::after {
-                        background: var(--website-theme-light-accordion-active-bg);
-                    }
-                }
-            }
-            &.has-dashed-lines { 
-                &::before { 
-                    background-image: var(--website-theme-light-list-dashed-line-bgimg);
-                }
-                li { 
-                    // Hidding dotted line for the last item of the list
-                    &:last-of-type { 
-                        &::before {
-                            background-color: var(--website-theme-light-bodybg-col);
-                        }
-                    }
-                }
-            }
-        }
-    }
+    //                 .banner-feature--img-deco {
+    //                     background-image: url(./_img/banner-light-what-we-do.png);
+    //                 }
+    //             }
+    //             &.accent-3 {
+    //                 background-color: var(--website-theme-light-banner-feature3-bgcol);
 
-    @layer section-info1 {
-        .section-info1 {
-            .section-info1__wrapper {
-                .item {
-                    &::after {
-                        background: linear-gradient(to right, var(--website-theme-light-presentation1-sep-col), transparent 100%);
-                    }
+    //                 .banner-feature--img-deco {
+    //                     background-image: url(./_img/banner-light-our-vision.png);
+    //                 }
+    //             }
+    //         }
 
-                    &:hover {
-                        background-color: var(--website-theme-light-section-info1-hover-bgcol);
-                    }
-                }
-            }
-        }
-    }
+    //     }
+    // }
+
+    // @layer block-presentation-1 {
+    //     .block-presentation-1 {
+    //         // left border
+    //         &::after {
+    //             background: linear-gradient(to bottom, var(--website-theme-light-presentation1-sep-col), transparent 100%);
+    //         }
+
+    //         // All 6 icons ...
+    //         &-icon1 {
+    //             &::before {
+    //                 background-image: url(./_img/icon-light-design-think-1.png);
+    //             }
+    //         }
+    //         &-icon2 {
+    //             &::before {
+    //                 background-image: url(./_img/icon-light-design-think-2.png);
+    //             }
+    //         }
+    //         &-icon3 {
+    //             &::before {
+    //                 background-image: url(./_img/icon-light-design-think-3.png);
+    //             }
+    //         }
+    //         &-icon4 {
+    //             &::before {
+    //                 background-image: url(./_img/icon-light-design-think-4.png);
+    //             }
+    //         }
+    //         &-icon5 {
+    //             &::before {
+    //                 background-image: url(./_img/icon-light-design-think-5.png);
+    //             }
+    //         }
+    //         &-icon6 {
+    //             &::before {
+    //                 background-image: url(./_img/icon-light-design-think-6.png);
+    //             }
+    //         }
+    //     }
+    // }
+
+    // @layer icon-elements {
+    //     .list-of-custom-icons {
+    //         li { 
+    //             &::after { 
+    //                 color: var(--website-theme-light-text-col);
+    //             }
+    //         }
+    //         &.has-checked-icons { 
+    //             li {
+    //                 &::after {
+    //                     background-image: url(./_img/icon-light-check.png);
+    //                 }
+    //             }
+    //         }
+    //         &.has-numbered-items {
+    //             li {
+    //                 &::after {
+    //                     background: var(--website-theme-light-accordion-active-bg);
+    //                 }
+    //             }
+    //         }
+    //         &.has-dashed-lines { 
+    //             &::before { 
+    //                 background-image: var(--website-theme-light-list-dashed-line-bgimg);
+    //             }
+    //             li { 
+    //                 // Hidding dotted line for the last item of the list
+    //                 &:last-of-type { 
+    //                     &::before {
+    //                         background-color: var(--website-theme-light-bodybg-col);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    // @layer section-info1 {
+    //     .section-info1 {
+    //         .section-info1__wrapper {
+    //             .item {
+    //                 &::after {
+    //                     background: linear-gradient(to right, var(--website-theme-light-presentation1-sep-col), transparent 100%);
+    //                 }
+
+    //                 &:hover {
+    //                     background-color: var(--website-theme-light-section-info1-hover-bgcol);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     @layer footer {
         .global-footer {
-            .container {
-                // Top gap ...
-                &::before {
-                    background-color: var(--website-theme-light-footer-top-sep-col);
-                }
+            background-color: var(--website-theme-light-col-2);
+
+            .logo, p, a {
+                color: var(--website-theme-light-col-gray-1);
             }
-            a {
-                color: var(--website-theme-light-text-col);
-                &:hover {
-                    color: var(--website-clr-col3-ff7);
-                }
+            .copyright {
+                color: var(--website-theme-light-col-gray-2);
             }
-            .footer-copyright {
-                p {
-                    color: var(--website-clr-gray-300);
-                }
-            }
-            .list-of-social-icons {
-                li {
-                    &::before,
-                    &::after {
-                        color: var(--website-clr-gray-300);
-                    }
-                }
-            }
-            &::after { // Bottom background decoration...
-                background-image: url(./_img/light-theme-footer-bg.png);
-            }
+            // .container {
+            //     // Top gap ...
+            //     &::before {
+            //         background-color: var(--website-theme-light-footer-top-sep-col);
+            //     }
+            // }
+            // a {
+            //     color: var(--website-theme-light-text-col);
+            //     &:hover {
+            //         color: var(--website-clr-col3-ff7);
+            //     }
+            // }
+            // .footer-copyright {
+            //     p {
+            //         color: var(--website-clr-gray-300);
+            //     }
+            // }
+            // .list-of-social-icons {
+            //     li {
+            //         &::before,
+            //         &::after {
+            //             color: var(--website-clr-gray-300);
+            //         }
+            //     }
+            // }
+            // &::after { // Bottom background decoration...
+            //     background-image: url(./_img/light-theme-footer-bg.png);
+            // }
         }
     }
 
-    @layer form-elts {
-        @layer inputs {
-            .form-label {
-                color: var(--website-theme-light-form-label-col);
-            }
-            .form-control {
-                border-color: var(--website-theme-light-form-control-bdrcol);
-                color: var(--website-theme-light-form-label-col);
-                background-color: var(--website-theme-light-form-control-bgcol);
-            }
-        }
-    }
+    // @layer form-elts {
+    //     @layer inputs {
+    //         .form-label {
+    //             color: var(--website-theme-light-form-label-col);
+    //         }
+    //         .form-control {
+    //             border-color: var(--website-theme-light-form-control-bdrcol);
+    //             color: var(--website-theme-light-form-label-col);
+    //             background-color: var(--website-theme-light-form-control-bgcol);
+    //         }
+    //     }
+    // }
 
-    @layer section-packages {
-        .section-packages { 
-            .section-packages-table {
-                td, th {
-                    color: var(--website-theme-light-text-col);
-                }
-                >:not(caption)>*>* {
-                    border-bottom-color: var(--website-theme-light-navbar-sep);
-                    background-color: var(--website-theme-light-section-info1-hover-bgcol);
-                }
-            }
-        }
-    }
+    // @layer section-packages {
+    //     .section-packages { 
+    //         .section-packages-table {
+    //             td, th {
+    //                 color: var(--website-theme-light-text-col);
+    //             }
+    //             >:not(caption)>*>* {
+    //                 border-bottom-color: var(--website-theme-light-navbar-sep);
+    //                 background-color: var(--website-theme-light-section-info1-hover-bgcol);
+    //             }
+    //         }
+    //     }
+    // }
 
-    @layer alert {
-        .alert {
-            color: var(--website-theme-light-headings-col);
-            border-left: 3px solid var(--website-theme-light-headings-col);
-            background-color: var(--website-theme-light-alert-info-bgcol);
+    // @layer alert {
+    //     .alert {
+    //         color: var(--website-theme-light-headings-col);
+    //         border-left: 3px solid var(--website-theme-light-headings-col);
+    //         background-color: var(--website-theme-light-alert-info-bgcol);
 
-            &-info {
-                &::before {
-                    background-image: url(./_img/icon-alert-info.png);
-                }
-            }
-        }
-    }
+    //         &-info {
+    //             &::before {
+    //                 background-image: url(./_img/icon-alert-info.png);
+    //             }
+    //         }
+    //     }
+    // }
 
-    @layer accordion {
-        .accordion {
-        }
-        .accordion-item {
-            border-top: 1px solid var(--website-theme-light-accordion-bdr-col);
+    // @layer accordion {
+    //     .accordion {
+    //     }
+    //     .accordion-item {
+    //         border-top: 1px solid var(--website-theme-light-accordion-bdr-col);
 
-            &:last-of-type {
-                border-bottom: 1px solid var(--website-theme-light-accordion-bdr-col);
-            }
-        }
-        .accordion-button {
-            color: var(--website-theme-light-headings-col);
+    //         &:last-of-type {
+    //             border-bottom: 1px solid var(--website-theme-light-accordion-bdr-col);
+    //         }
+    //     }
+    //     .accordion-button {
+    //         color: var(--website-theme-light-headings-col);
 
-            &::after {
-                background-image: var(--website-theme-light-accordion-arrow-down);
-            }
+    //         &::after {
+    //             background-image: var(--website-theme-light-accordion-arrow-down);
+    //         }
 
-            &:not(.collapsed) {
-                background-color: var(--website-theme-light-accordion-active-bg);
-                color: var(--website-theme-light-headings-col);
-                box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--website-theme-light-accordion-bdr-col);
+    //         &:not(.collapsed) {
+    //             background-color: var(--website-theme-light-accordion-active-bg);
+    //             color: var(--website-theme-light-headings-col);
+    //             box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--website-theme-light-accordion-bdr-col);
 
-                &::after {
-                    background-image: var(--website-theme-light-accordion-arrow-up);
-                }
-            }
+    //             &::after {
+    //                 background-image: var(--website-theme-light-accordion-arrow-up);
+    //             }
+    //         }
 
-            &:hover {
-                background-color: var(--website-theme-light-accordion-active-bg-hover);
-            }
-        }
-        .accordion-collapse.collapse.show {
-            background-color: var(--website-theme-light-accordion-active-bg);
-        }
-    }
+    //         &:hover {
+    //             background-color: var(--website-theme-light-accordion-active-bg-hover);
+    //         }
+    //     }
+    //     .accordion-collapse.collapse.show {
+    //         background-color: var(--website-theme-light-accordion-active-bg);
+    //     }
+    // }
 
-    @layer section-top-clients {
-        .section-top-clients {
-            .badge.tv-text-bg-info {
-                background-color: var(--website-theme-light-section-top-clients-badge-bgcol)!important;
-                color: var(--website-theme-light-section-top-clients-badge-col)!important;
-            }
-        }
-    }
+    // @layer section-top-clients {
+    //     .section-top-clients {
+    //         .badge.tv-text-bg-info {
+    //             background-color: var(--website-theme-light-section-top-clients-badge-bgcol);
+    //             color: var(--website-theme-light-section-top-clients-badge-col);
+    //         }
+    //     }
+    // }
 
-    @layer case-study-thumb {
-        .case-study-thumb {
-            a {
-                &:hover {
-                    background-color: var(--website-theme-light-case-study-thumb-hover-bgcol);
-                    h3 {
-                        color: var(--website-theme-light-case-study-thumb-hover-col);
-                    }
-                    .img-fluid {
-                        opacity: 0.4;
-                    }
-                }
-            }
-        }
-    }
-}
+    // @layer case-study-thumb {
+    //     .case-study-thumb {
+    //         a {
+    //             &:hover {
+    //                 background-color: var(--website-theme-light-case-study-thumb-hover-bgcol);
+    //                 h3 {
+    //                     color: var(--website-theme-light-case-study-thumb-hover-col);
+    //                 }
+    //                 .img-fluid {
+    //                     opacity: 0.4;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+// }
