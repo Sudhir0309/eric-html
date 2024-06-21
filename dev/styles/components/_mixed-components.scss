@@ -7,11 +7,23 @@
 **/
 
 :root {
-    // --website-block-pres1-icon-dim: 54px;
-    // --website-block-pres1-icon-dim-mrg: 0 0 20px 0;
-    // --website-list-social-icons-dim: 20px;
+    --website-anchors-scrollto-top: -120px;
+    --website-btnscrolltop-padding: 5px 10px;
+    --website-btnscrolltop-font-size: 0.8rem;
+    --website-btnscrolltop-right: 10px;
+    --website-btnscrolltop-arrowdisplay: none;
+}
 
-    // --website-list-hasnumbitems-paddleft: 45px;
+
+@layer anchors-scrollto {
+    section { // Setting all sections of the website to a relative positionning for now
+        position: relative;
+    }
+
+    .anchors-scrollto {
+        position: absolute;
+        top: var(--website-anchors-scrollto-top); 
+    }
 }
 
 
@@ -20,7 +32,56 @@
         position: fixed;
         z-index: 999;
         bottom: 30px;
-        right: 30px;
+        padding: var(--website-btnscrolltop-padding);
+        font-size: var(--website-btnscrolltop-font-size);
+        right: var(--website-btnscrolltop-right);
+        &::after {
+            display: var(--website-btnscrolltop-arrowdisplay);
+        }
+
+
+
+        // Extra Large screens ...
+        @media (min-width: 1400px) {
+            border: 10px solid purple;
+            --website-btnscrolltop-padding: 10px 45px 10px 20px;
+            --website-btnscrolltop-font-size: 1.2rem;
+            --website-btnscrolltop-arrowdisplay: block;
+        }
+        
+        // Large screens ...
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            border: 10px solid violet;
+            --website-btnscrolltop-padding: 10px 45px 10px 20px;
+            --website-btnscrolltop-font-size: 1.2rem;
+            --website-btnscrolltop-arrowdisplay: block;
+        }
+        
+        // Large Medium screens ...
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            border: 10px solid lime;
+            --website-btnscrolltop-padding: 10px 45px 10px 20px;
+            --website-btnscrolltop-font-size: 1.2rem;
+            --website-btnscrolltop-arrowdisplay: block;
+        }
+
+        // Medium Medium screens ...
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            border: 10px solid blue;
+            --website-btnscrolltop-padding: 10px 45px 10px 20px;
+            --website-btnscrolltop-font-size: 1.2rem;
+            --website-btnscrolltop-arrowdisplay: block;
+        }
+
+        // Small Medium screens ...
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 10px solid turquoise;
+        }
+
+        // Smaller screens ...
+        @media (max-width: (576px - 1px)) {
+            border: 10px solid chocolate;
+        }
     }
 }
 

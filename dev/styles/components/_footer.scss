@@ -1,28 +1,17 @@
 :root {
+    --website-footer-padding: 60px 0;
     --website-footer-text-wrapper-gap: 20px;
     --website-footer-text-wrapper-width: 480px;
     --website-footer-logo-fontsize: 1.5rem;
     --website-footer-logo-padding: 0 30px 0 0;
     --website-footer-logo-icon-fontsize: 1.3rem;
     --website-footer-logo-icon-top: 7px;
-    // --website-footer-from-wrap-grid-col: span 3;
-    // --website-footer-grid-template: auto / 1fr 1fr;
-    // --website-footer-form-contact-gap: 12px;
-    // --website-footer-form-contact-btn-mrg: 7px auto 0 0;
-    // --website-footer-form-contact-grid-template: auto / auto;
-    // --website-footer-width: 100px;
-    // --website-footer-form-contact-align-item: unset;
-    // --website-footer-footer-copyright-flex-dir: column;
-    // --website-footer-footer-copyright-gap: 5px;
-    // --website-footer-footer-copyright-justify-content: unset;
-
-
-    // --website-footer-social-icons-top: unset;
-    // --website-footer-social-icons-fsize: unset;
 }
 
 @layer footer {
     .global-footer {
+        padding: var(--website-footer-padding);
+
         .text-wrapper {
             display: flex;
             flex-direction: column;
@@ -81,47 +70,54 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 10px solid purple;
+            // border: 10px solid purple;
             --website-footer-text-wrapper-gap: 30px;
             --website-footer-logo-fontsize: 2rem;
             --website-footer-logo-icon-fontsize: 1.5rem;
             --website-footer-logo-icon-top: 9px;
             --website-footer-logo-padding: 0 37px 0 0;
+            // padding ...
+            --website-footer-padding: 100px 0;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 10px solid violet;
+            // border: 10px solid violet;
             --website-footer-text-wrapper-gap: 30px;
             --website-footer-logo-fontsize: 2rem;
             --website-footer-logo-icon-fontsize: 1.5rem;
             --website-footer-logo-icon-top: 9px;
             --website-footer-logo-padding: 0 37px 0 0;
+            // padding ...
+            --website-footer-padding: 100px 0;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 10px solid lime;
+            // border: 10px solid lime;
             --website-footer-text-wrapper-gap: 30px;
             --website-footer-logo-fontsize: 2rem;
             --website-footer-logo-icon-fontsize: 1.5rem;
             --website-footer-logo-icon-top: 9px;
             --website-footer-logo-padding: 0 37px 0 0;
+            // padding ...
+            --website-footer-padding: 100px 0;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 10px solid blue;
+            // border: 10px solid blue;
+            --website-footer-padding: 100px 0;
         }
 
-        // Small Medium screens ...
-        @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 10px solid turquoise;
-        }
+        // // Small Medium screens ...
+        // @media (min-width: 576px) and (max-width: (768px - 1)) {
+        //     border: 10px solid turquoise;
+        // }
 
-        // Smaller screens ...
-        @media (max-width: (576px - 1px)) {
-            border: 10px solid chocolate;
-        }
+        // // Smaller screens ...
+        // @media (max-width: (576px - 1px)) {
+        //     border: 10px solid chocolate;
+        // }
     }
 }

@@ -1,34 +1,32 @@
 'use strict';
 
 import { handleViewportChange as handleViewportChange } from './videoBannerAccessibility.js';
-// import { videoBackgroundSetup as videoBackgroundSetup } from './video-background.js';
+import { setElementSticky as setElementSticky } from './sticky-nav.js';
+import { setupScrolltopBtn as setupScrolltopBtn } from './scroll-top-btn.js';
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const mediaQuery = window.matchMedia('(min-width: 992px)');
 
-  // Initial check
-  handleViewportChange(mediaQuery);
-  // videoBackgroundSetup();
-
-  // Listen for changes in the viewport width
+  /**
+   * Hide/reveal DOM elements to accessible technologies based on media queries
+   */
+  // 1) Initial check
+  handleViewportChange(mediaQuery);  
+  // 2) Listen for changes in the viewport width
   mediaQuery.addListener(handleViewportChange);
+
+
+  /**
+   * Set main navigation sticky
+   */
+  setElementSticky('main-nav');
+
+  /**
+   * 
+   */
+  setupScrolltopBtn('scroll-top-button', 300);
 });
 
 
-
-
-
-// script.js
-
-document.addEventListener('DOMContentLoaded', function() {
-  const stickyDiv = document.getElementById('main-nav');
-  const offsetTop = stickyDiv.offsetTop;
-
-  window.addEventListener('scroll', function() {
-      if (window.pageYOffset >= offsetTop) {
-          stickyDiv.classList.add('is-fixed');
-      } else {
-          stickyDiv.classList.remove('is-fixed');
-      }
-  });
-});

@@ -1,5 +1,9 @@
 
-
+/**
+ * 1) Make sure elements that are hidden with CSS are also hidden from the accessible technologies
+ * 2) This script is specific to "section-video-banner" element
+ * @param {*} event 
+ */
 export function handleViewportChange(event) {
     const vidBannerElements = document.querySelectorAll('.section-video-banner');
     vidBannerElements.forEach(vidBannerElement => {
