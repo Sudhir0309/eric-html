@@ -12,6 +12,7 @@
 
 
 @layer section-video-banner {
+
     .section-video-banner {
         display: flex;
         flex-direction: var(--website-secvidbann-flex-dir);
@@ -41,9 +42,21 @@
         } 
 
         &__video {
-            background: #333;
+            // background: #333;
             width: var(--website-secvidbann-video-width);
             height: var(--website-secvidbann-vid-height);
+
+            &.has-glare-protector {
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color: #000000, $alpha: 0.3);
+                }
+            }
         }
 
         // ...

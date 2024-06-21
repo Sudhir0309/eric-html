@@ -17,7 +17,7 @@
 @layer base {
     @import './base/initialization';
     @import './base/variables';
-//     @import './base/utilities';
+    @import './base/utilities';
 }
 
 
@@ -43,7 +43,7 @@
     @import './components/speech-bubble';
     @import './components/navbar';
 //     @import './components/banners';
-//     @import './components/mixed-components';
+    @import './components/mixed-components';
 //     @import './components/alert';
     @import './components/section-video-banner';
     @import './components/footer';

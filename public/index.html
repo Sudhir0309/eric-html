@@ -41,15 +41,15 @@
 
 
 
-    <nav class="navbar navbar-expand-lg w-100 sticky-top">
+    <nav id="main-nav" class="navbar navbar-expand-lg w-100 sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Eric Njanga</a>
+        <a class="navbar-brand" href="#eric-njanga">Eric Njanga</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link" href="#senior-ui-developer">Senior UI Developer</a>
             </li>
@@ -67,7 +67,7 @@
               </ul>
             </li> -->
           </ul>
-          <ul class="navbar-nav talk-nav mb-2 mb-lg-0">
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a href="https://www.linkedin.com/in/ericnjanga/" target="_blank" class="nav-link fw-bold">I'm on LinkedIn
                 <i class="bi bi-linkedin ms-2"></i></a>
@@ -110,12 +110,12 @@
             too</a>
         </footer>
     </article>
-    <div class="section-video-banner__video">
-      <!-- <video class="" controls="controls">
-              <source src="https://tenverto.com/wp-content/uploads/2023/07/Case-Study-1-Finished-Product.mp4"
-                type="video/mp4" />
-            </video> -->
-    </div>
+
+    <!--
+      Video background plugin (https://vodkabears.github.io/vide/)
+      Note: Video activated via html attributes (no need for javascript initialization)
+    -->
+    <div class="section-video-banner__video video-background has-glare-protector" data-vide-bg="mp4: https://tenverto.com/wp-content/uploads/2024/01/Case-Study-1-Prototyping.mp4"></div>
     <footer class="section-footer-cta d-small">
       <a href="#ux-designer" class="btn btn-primary item-icon-material item-icon-material-after arrow-down">I’m an excellent UX Designer
         too</a>
@@ -123,7 +123,6 @@
   </section>
 
   <section id="ux-designer" class="section-video-banner section-video-banner--right-orientation sc-block-mg-bot">
-
     <article class="section-video-banner__text">
       <h2>UX Designer</h2>
       <p>After spending 10 years as a UI developer, I decided to dive into UX design. I enrolled in the
@@ -137,12 +136,12 @@
         <a href="#linkedIn-publisher" class="btn btn-primary item-icon-material item-icon-material-after arrow-down">I write articles on LinkedIn</a>
       </footer>
     </article>
-    <div class="section-video-banner__video">
-      <!-- <video class="" controls="controls">
-              <source src="https://tenverto.com/wp-content/uploads/2024/01/Case-Study-1-Prototyping.mp4"
-                type="video/mp4" />
-            </video> -->
-    </div>
+
+    <!--
+      Video background plugin (https://vodkabears.github.io/vide/)
+      Note: Video activated via html attributes (no need for javascript initialization)
+    -->
+    <div class="section-video-banner__video video-background has-glare-protector" data-vide-bg="mp4: https://tenverto.com/wp-content/uploads/2024/01/Case-Study-1-Prototyping.mp4"></div>
     <footer class="section-footer-cta d-small">
       <a href="#linkedIn-publisher" class="btn btn-primary item-icon-material item-icon-material-after arrow-down">I write articles on LinkedIn</a>
     </footer>
@@ -171,11 +170,23 @@
   </footer>
 
 
+  <a href="#eric-njanga" class="btn btm-small btn-scroll-top">Scroll top</a>
+
+
 
   <!-- Bootstrap v5 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+  <!-- Video background plugin (https://vodkabears.github.io/vide/) -->
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/background-video@1.0.7/jquery.background-video.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vide/0.5.1/jquery.vide.min.js"></script>
+
+
+
 
 
   <!-- script bundle-->

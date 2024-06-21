@@ -6,45 +6,54 @@
 
 @layer utilities {
 
-    .box-width-1 {
-        max-width: var(--website-box-width-1);
-    }
-    .box-width-2 {
-        max-width: var(--website-box-width-2);
-    }
 
-
-    .fw-450 {
-        font-weight: 450!important;
-    }
-
-    // Will force the image to behave like it's being cropped:
-    // Whenever the size of the image varies, the picture remains constant
-    .img-poster {
-        object-fit: cover;
+    .is-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
+        z-index: 1000; /* Ensure it's on top */
     }
 
-    .highlight-col1 {
-        color: var(--website-clr-col1-700);
-    }
-    a.highlight-col1 {
-        &:hover {
-            color: var(--website-clr-col3-e75);
-            text-decoration: none;
-        }
-    }
+    // .box-width-1 {
+    //     max-width: var(--website-box-width-1);
+    // }
+    // .box-width-2 {
+    //     max-width: var(--website-box-width-2);
+    // }
 
-    a.shinespot-col3-1 {
-        &:hover {
-            color: var(--website-clr-col3-e75);
-            text-decoration: none;
-        }
-    }
 
-    .fs-14 {
-        font-size: 14px;
-    }
+    // .fw-450 {
+    //     font-weight: 450!important;
+    // }
+
+    // // Will force the image to behave like it's being cropped:
+    // // Whenever the size of the image varies, the picture remains constant
+    // .img-poster {
+    //     object-fit: cover;
+    //     width: 100%;
+    // }
+
+    // .highlight-col1 {
+    //     color: var(--website-clr-col1-700);
+    // }
+    // a.highlight-col1 {
+    //     &:hover {
+    //         color: var(--website-clr-col3-e75);
+    //         text-decoration: none;
+    //     }
+    // }
+
+    // a.shinespot-col3-1 {
+    //     &:hover {
+    //         color: var(--website-clr-col3-e75);
+    //         text-decoration: none;
+    //     }
+    // }
+
+    // .fs-14 {
+    //     font-size: 14px;
+    // }
 //     @layer decorators {
 //         .bg-clr-gray, .bg-clr-white {
 //             position: relative;

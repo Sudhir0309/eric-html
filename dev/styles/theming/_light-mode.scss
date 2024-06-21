@@ -3,12 +3,14 @@
     --website-theme-light-col-1a: #fff;
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
+    --website-theme-light-col-2b1: #756900;
     --website-theme-light-col-2c: #fff7b0;
     --website-theme-light-col-3a: #080806;
     --website-theme-light-col-3b: #262200;
-    --website-theme-light-col-3c: red;
+    --website-theme-light-col-3c: #4A4834;
     --website-theme-light-col-gray-1: #E3E1CC;
     --website-theme-light-col-gray-2: #B0AE9E;
+    --website-theme-light-col-gray-3: #aaa;
 
     --website-theme-light-headings-col: var(--website-theme-light-col-3b);
 }
@@ -45,6 +47,22 @@
     @layer navbar {
         .navbar {
             background-color: var(--website-theme-light-col-1a);
+
+            .navbar-brand, .nav-link {
+                color: var(--website-theme-light-col-3c);
+                
+                &:hover, &.active {
+                    color: var(--website-theme-light-col-2b1);
+                } 
+            }
+
+            .nav-item { 
+                // separator between links
+                &::after { 
+                    background-color: var(--website-theme-light-col-gray-3);
+                }
+            }
+
             // .navbar-nav__primary-links {
             //     a {
             //         color: var(--website-theme-light-headings-col);
@@ -66,15 +84,6 @@
             //     color: var(--website-theme-light-navbar-sep);
             // }
 
-            // .nav-link {
-            //     &:hover {
-            //         color: var(--website-theme-light-navbar-link-hover);
-            //     } 
-            //     &.active {
-            //         color: var(--website-theme-light-navbar-link-hover);
-            //     }
-            // }
-
             // .navbar-toggler-icon {
             //     background-image: url(./_img/light-theme-navbar-toggler-icon-bg.png); 
             // }
@@ -91,7 +100,8 @@
                 background-color: var(--website-theme-light-col-2c);
 
                 &:hover {
-                    background-color: transparent;
+                    color: var(--website-theme-light-col-1a);
+                    background-color: var(--website-theme-light-col-2b1);
                 }
             }
         }

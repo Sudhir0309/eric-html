@@ -11137,6 +11137,15 @@
     --website-bdr-radius-3: 30px;
     --website-icon-list-icon-dim: 36px;
   }
+  @layer utilities {
+    .is-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Ensure it's on top */
+    }
+  }
 }
 .custom-icon {
   width: 68px;
@@ -11395,31 +11404,6 @@
       }
     }
   }
-  @layer section-footer-cta {
-    .section-footer-cta {
-      margin: var(--website-section-footer-cta-marg);
-    }
-    @media (min-width: 1400px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 35px 0 0 0;
-      }
-    }
-    @media (min-width: 1200px) and (max-width: 1399px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 35px 0 0 0;
-      }
-    }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 30px 0 0 0;
-      }
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 25px 0 0 0;
-      }
-    }
-  }
   :root {
     --website-hero-height: 270px;
     --website-hero-deo-width: 300px;
@@ -11556,44 +11540,56 @@
       transform: translateX(-50%);
     }
   }
+  :root {
+    --website-navbar-margin: 0;
+    --website-navbar-gap: 0;
+    --website-navbar-padding: 0;
+    --website-navbar-navitem-sep-display: none;
+    --website-navbar-navitem-sep-right: -12px;
+  }
   @layer navbar {
+    .navbar {
+      padding: var(--website-navbar-padding);
+    }
     @media (min-width: 1400px) {
       .navbar {
-        border: 3px solid purple;
+        --website-navbar-margin: 0 auto;
+        --website-navbar-padding: 10px 0;
+        --website-navbar-navitem-sep-display: block;
+        --website-navbar-gap: 30px;
+        --website-navbar-navitem-sep-right: -18px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .navbar {
-        border: 3px solid violet;
+        --website-navbar-margin: 0 auto;
+        --website-navbar-padding: 10px 0;
+        --website-navbar-navitem-sep-display: block;
+        --website-navbar-gap: 30px;
+        --website-navbar-navitem-sep-right: -18px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .navbar {
-        border: 3px solid lime;
+        --website-navbar-margin: 0 auto;
+        --website-navbar-padding: 10px 0;
+        --website-navbar-navitem-sep-display: block;
+        --website-navbar-gap: 20px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .navbar {
-        border: 3px solid blue;
-      }
-    }
-    @media (min-width: 576px) and (max-width: 767px) {
-      .navbar {
-        border: 3px solid turquoise;
-      }
-    }
-    @media (max-width: 575px) {
-      .navbar {
-        border: 3px solid chocolate;
+        --website-navbar-padding: 10px 0;
       }
     }
     .navbar .nav-item {
       position: relative;
     }
     .navbar .nav-item::after {
+      display: var(--website-navbar-navitem-sep-display);
       position: absolute;
       top: 30%;
-      right: -10px;
+      right: var(--website-navbar-navitem-sep-right);
       content: "";
       width: 1px;
       height: 20px;
@@ -11611,9 +11607,51 @@
     }
     .navbar .navbar-brand {
       font-size: 1.6rem;
+      letter-spacing: 2px;
+      font-weight: 700;
     }
     .navbar .navbar-brand:hover {
       text-decoration: underline;
+    }
+  }
+  /**
+   * - block-presentation-1
+   * - list-of-social-icons
+   * - list-items-inline
+   * - list-items-inline
+   *
+  **/
+  @layer btn-scroll-top {
+    .btn-scroll-top {
+      position: fixed;
+      z-index: 999;
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+  @layer section-footer-cta {
+    .section-footer-cta {
+      margin: var(--website-section-footer-cta-marg);
+    }
+    @media (min-width: 1400px) {
+      .section-footer-cta {
+        --website-section-footer-cta-marg: 35px 0 0 0;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .section-footer-cta {
+        --website-section-footer-cta-marg: 35px 0 0 0;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .section-footer-cta {
+        --website-section-footer-cta-marg: 30px 0 0 0;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .section-footer-cta {
+        --website-section-footer-cta-marg: 25px 0 0 0;
+      }
     }
   }
   :root {
@@ -11651,9 +11689,17 @@
       margin-bottom: 0 !important;
     }
     .section-video-banner__video {
-      background: #333;
       width: var(--website-secvidbann-video-width);
       height: var(--website-secvidbann-vid-height);
+    }
+    .section-video-banner__video.has-glare-protector:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
     }
     .section-video-banner--right-orientation {
       flex-direction: var(--website-secvidbann-orright-flex-dir);
@@ -11712,12 +11758,14 @@
     --website-theme-light-col-1a: #fff;
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
+    --website-theme-light-col-2b1: #756900;
     --website-theme-light-col-2c: #fff7b0;
     --website-theme-light-col-3a: #080806;
     --website-theme-light-col-3b: #262200;
-    --website-theme-light-col-3c: red;
+    --website-theme-light-col-3c: #4A4834;
     --website-theme-light-col-gray-1: #E3E1CC;
     --website-theme-light-col-gray-2: #B0AE9E;
+    --website-theme-light-col-gray-3: #aaa;
     --website-theme-light-headings-col: var(--website-theme-light-col-3b);
   }
   body {
@@ -11745,6 +11793,15 @@
     .navbar {
       background-color: var(--website-theme-light-col-1a);
     }
+    .navbar .navbar-brand, .navbar .nav-link {
+      color: var(--website-theme-light-col-3c);
+    }
+    .navbar .navbar-brand:hover, .navbar .navbar-brand.active, .navbar .nav-link:hover, .navbar .nav-link.active {
+      color: var(--website-theme-light-col-2b1);
+    }
+    .navbar .nav-item::after {
+      background-color: var(--website-theme-light-col-gray-3);
+    }
   }
   @layer section-video-banner {
     .section-video-banner a:not(.btn) {
@@ -11752,7 +11809,8 @@
       background-color: var(--website-theme-light-col-2c);
     }
     .section-video-banner a:not(.btn):hover {
-      background-color: transparent;
+      color: var(--website-theme-light-col-1a);
+      background-color: var(--website-theme-light-col-2b1);
     }
   }
   @layer buttons {
