@@ -19,7 +19,7 @@
 
             // Extra Large screens ...
             @media (min-width: 1400px) {
-                border: 10px solid purple;
+                // border: 10px solid purple;
                 --website-btn-padding: 15px 30px;
                 --website-btn-fontsize: 1.35rem;
                 // btn icon ...
@@ -28,7 +28,7 @@
             
             // Large screens ...
             @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-                border: 10px solid violet;
+                // border: 10px solid violet;
                 --website-btn-padding: 15px 30px;
                 --website-btn-fontsize: 1.35rem;
                 // btn icon ...
@@ -37,27 +37,27 @@
             
             // Large Medium screens ...
             @media (min-width: 992px) and (max-width: (1200px - 1)) {
-                border: 10px solid lime;
+                // border: 10px solid lime;
                 --website-btn-padding: 15px 30px;
                 --website-btn-fontsize: 1.35rem;
                 // btn icon ...
                 --website-btnicon-icon-top: 8px;
             }
 
-            // Medium Medium screens ...
-            @media (min-width: 768px) and (max-width: (992px - 1)) {
-                border: 10px solid blue;
-            }
+            // // Medium Medium screens ...
+            // @media (min-width: 768px) and (max-width: (992px - 1)) {
+            //     border: 10px solid blue;
+            // }
 
-            // Small Medium screens ...
-            @media (min-width: 576px) and (max-width: (768px - 1)) {
-                border: 10px solid turquoise;
-            }
+            // // Small Medium screens ...
+            // @media (min-width: 576px) and (max-width: (768px - 1)) {
+            //     border: 10px solid turquoise;
+            // }
 
-            // Smaller screens ...
-            @media (max-width: (576px - 1px)) {
-                border: 10px solid chocolate;
-            }
+            // // Smaller screens ...
+            // @media (max-width: (576px - 1px)) {
+            //     border: 10px solid chocolate;
+            // }
         }
         .btn.item-icon-bootstrap,
         .btn.item-icon-material {

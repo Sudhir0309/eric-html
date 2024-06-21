@@ -57,6 +57,9 @@
         // }
 
         
+        .navbar-nav {
+            gap: var(--website-navbar-gap);
+        }
 
         .nav-item { 
             position: relative;
@@ -93,8 +96,8 @@
         .navbar-brand {
             font-size: 1.6rem;
             // opacity: 0.7;
-            letter-spacing: 2px;
-            font-weight: 700;
+            // letter-spacing: 2px;
+            // font-weight: 700;
 
             &:hover {
                 text-decoration: underline;

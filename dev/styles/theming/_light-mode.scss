@@ -62,34 +62,6 @@
                     background-color: var(--website-theme-light-col-gray-3);
                 }
             }
-
-            // .navbar-nav__primary-links {
-            //     a {
-            //         color: var(--website-theme-light-headings-col);
-            //     }
-            // }
-
-            // .logo {
-            //     path {
-            //         fill: var(--website-theme-light-headings-col);
-            //     }
-            //     &:hover {
-            //         path {
-            //             fill: var(--website-theme-light-navbar-link-hover);
-            //         }
-            //     }
-            // }
-
-            // .sep {
-            //     color: var(--website-theme-light-navbar-sep);
-            // }
-
-            // .navbar-toggler-icon {
-            //     background-image: url(./_img/light-theme-navbar-toggler-icon-bg.png); 
-            // }
-            // .navbar-toggler:focus {
-            //     box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) #2f2d35;
-            // }
         }
     }
 
@@ -129,10 +101,7 @@
     // }
 
     @layer buttons {
-        .btn-primary {
-            color: var(--website-theme-light-col-3a);
-            background-color: var(--website-theme-light-col-2a);
-            border-color: var(--website-theme-light-col-3a);
+        .btn-primary, .btn-secondary {
             border-top-width: 3px;
             border-right-width: 0px;
             border-bottom-width: 3px;
@@ -141,21 +110,23 @@
             &:hover {
                 color: var(--website-theme-light-col-1a);
                 background-color: var(--website-theme-light-col-2b);
-                // border-color: var(--website-theme-light-col-3a);
+                border-color: var(--website-theme-light-col-2b);
             }
         }
-        // .slick-arrow:not(.slick-disabled), //Settting carousel button as a seondary button
-        // .btn-secondary {
-        //     color: var(--website-theme-light-text-col);
-        //     background-color: transparent;
-        //     border-color: var(--website-theme-light-headings-col);
+        .btn-primary {
+            color: var(--website-theme-light-col-3a);
+            background-color: var(--website-theme-light-col-2a);
+            border-color: var(--website-theme-light-col-3a);
+        }
 
-        //     &:hover {
-        //         color: var(--website-theme-light-text-col);
-        //         background-color: var(--website-theme-light-navbar-link-hover);
-        //         border-color: var(--website-theme-light-headings-col);
-        //     }
-        // }
+        .btn-secondary {
+            color: var(--website-theme-light-col-1a);
+            background-color: var(--website-theme-light-col-3a);
+            border-color: var(--website-theme-light-col-2c); 
+        }
+
+        // .slick-arrow:not(.slick-disabled), //Settting carousel button as a seondary button
+        
         // .slick-disabled {
         //     color: var(--website-theme-light-text-col);
         //     background-color: transparent;
@@ -306,37 +277,22 @@
             .logo, p, a {
                 color: var(--website-theme-light-col-gray-1);
             }
+            .logo, a {
+                color: var(--website-theme-light-col-2c);
+
+                &:hover {
+                    color: var(--website-theme-light-col-2a);
+                }
+            }
+            a {
+                &::before {
+                    color: var(--website-theme-light-col-2a);
+                }
+            }
             .copyright {
                 color: var(--website-theme-light-col-gray-2);
             }
-            // .container {
-            //     // Top gap ...
-            //     &::before {
-            //         background-color: var(--website-theme-light-footer-top-sep-col);
-            //     }
-            // }
-            // a {
-            //     color: var(--website-theme-light-text-col);
-            //     &:hover {
-            //         color: var(--website-clr-col3-ff7);
-            //     }
-            // }
-            // .footer-copyright {
-            //     p {
-            //         color: var(--website-clr-gray-300);
-            //     }
-            // }
-            // .list-of-social-icons {
-            //     li {
-            //         &::before,
-            //         &::after {
-            //             color: var(--website-clr-gray-300);
-            //         }
-            //     }
-            // }
-            // &::after { // Bottom background decoration...
-            //     background-image: url(./_img/light-theme-footer-bg.png);
-            // }
+            
         }
     }
 

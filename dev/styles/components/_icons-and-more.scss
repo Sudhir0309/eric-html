@@ -153,6 +153,11 @@
         }
 
         &-before {
+            &.arrow-up {
+                &::before {
+                    content: "\e5d8";
+                } 
+            }
             &.arrow-down {
                 &::before {
                     content: "\e5db";
@@ -181,6 +186,11 @@
         }
 
         &-after {
+            &.arrow-up {
+                &::after {
+                    content: "\e5d8";
+                } 
+            }
             &.arrow-down {
                 &::after {
                     content: "\e5db";
