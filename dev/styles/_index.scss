@@ -26,14 +26,6 @@
 // }
 
 
-section {
-    background-color: aqua;
-}
-
-video {
-    width: 100%;
-}
-
 
 .custom-icon {
     width: 68px;
@@ -44,11 +36,12 @@ video {
 @layer components {
 //     // The "icons-and-more" file has to remain on top because of the 
 //     // "icon-foundation" layer that needs to be overriten by the other layers
-//     @import './components/form-elts';
-//     @import './components/icons-and-more'; 
+    @import './components/icons-and-more';
+    @import './components/form-elts';
+    @import './components/jumbotron';
     @import './components/hero';
     @import './components/speech-bubble';
-//     @import './components/navbar';
+    @import './components/navbar';
 //     @import './components/banners';
 //     @import './components/mixed-components';
 //     @import './components/alert';

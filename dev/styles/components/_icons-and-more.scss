@@ -16,7 +16,7 @@
     .item-icon-material {
         &::before,
         &::after {
-            color: var(--website-clr-col1-700);
+            font-weight: 800;
         }
     }
 
@@ -153,6 +153,11 @@
         }
 
         &-before {
+            &.arrow-down {
+                &::before {
+                    content: "\e5db";
+                }
+            }
             &.file-description {
                 &::before {
                     content: "\e873";
@@ -176,6 +181,11 @@
         }
 
         &-after {
+            &.arrow-down {
+                &::after {
+                    content: "\e5db";
+                }
+            }
             &.file-description {
                 &::after {
                     content: "\e873";

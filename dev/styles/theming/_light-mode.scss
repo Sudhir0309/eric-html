@@ -1,26 +1,34 @@
 :root {
     // --website-theme-light-bodybg-col: #F8F7F4;
-    --website-theme-light-col-primary: #FFE500;
-    --website-theme-light-col-2: #080806;
-    --website-theme-light-col-2-b: #262200;
+    --website-theme-light-col-1a: #fff;
+    --website-theme-light-col-2a: #FFE500;
+    --website-theme-light-col-2b: #8b7d00;
+    --website-theme-light-col-2c: #fff7b0;
+    --website-theme-light-col-3a: #080806;
+    --website-theme-light-col-3b: #262200;
+    --website-theme-light-col-3c: red;
     --website-theme-light-col-gray-1: #E3E1CC;
     --website-theme-light-col-gray-2: #B0AE9E;
 
-    --website-theme-light-headings-col: var(--website-theme-light-col-2-b);
+    --website-theme-light-headings-col: var(--website-theme-light-col-3b);
 }
 
 // html[data-theme="light"] {
-    // body {
-    //     background-color: var(--website-theme-light-bodybg-col);
-    //     color: var(--website-theme-light-text-col);
-    // }
+    body {
+        background-color: var(--website-theme-light-col-1a);
+        color: var(--website-theme-light-col-3c);
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--website-theme-light-col-3b);
+        }
+    }
 
     @layer hero {
         .hero {
-            background-color: var(--website-theme-light-col-2);
+            background-color: var(--website-theme-light-col-3a);
 
             .speech-bubble {
-                background-color: var(--website-theme-light-col-primary);
+                background-color: var(--website-theme-light-col-2a);
 
                 a {
                     color: var(--website-theme-light-headings-col);
@@ -28,53 +36,66 @@
 
                 // Speech bubble pointer
                 &::before {
-                    border-bottom-color: var(--website-theme-light-col-primary);
+                    border-bottom-color: var(--website-theme-light-col-2a);
                 } 
             }
         }
     }
 
-    // @layer navbar {
-    //     .navbar {
-    //         background-color: var(--website-theme-light-bodybg-col);
-    //         .navbar-nav__primary-links {
-    //             a {
-    //                 color: var(--website-theme-light-headings-col);
-    //             }
-    //         }
+    @layer navbar {
+        .navbar {
+            background-color: var(--website-theme-light-col-1a);
+            // .navbar-nav__primary-links {
+            //     a {
+            //         color: var(--website-theme-light-headings-col);
+            //     }
+            // }
 
-    //         .logo {
-    //             path {
-    //                 fill: var(--website-theme-light-headings-col);
-    //             }
-    //             &:hover {
-    //                 path {
-    //                     fill: var(--website-theme-light-navbar-link-hover);
-    //                 }
-    //             }
-    //         }
+            // .logo {
+            //     path {
+            //         fill: var(--website-theme-light-headings-col);
+            //     }
+            //     &:hover {
+            //         path {
+            //             fill: var(--website-theme-light-navbar-link-hover);
+            //         }
+            //     }
+            // }
 
-    //         .sep {
-    //             color: var(--website-theme-light-navbar-sep);
-    //         }
+            // .sep {
+            //     color: var(--website-theme-light-navbar-sep);
+            // }
 
-    //         .nav-link {
-    //             &:hover {
-    //                 color: var(--website-theme-light-navbar-link-hover);
-    //             } 
-    //             &.active {
-    //                 color: var(--website-theme-light-navbar-link-hover);
-    //             }
-    //         }
+            // .nav-link {
+            //     &:hover {
+            //         color: var(--website-theme-light-navbar-link-hover);
+            //     } 
+            //     &.active {
+            //         color: var(--website-theme-light-navbar-link-hover);
+            //     }
+            // }
 
-    //         .navbar-toggler-icon {
-    //             background-image: url(./_img/light-theme-navbar-toggler-icon-bg.png); 
-    //         }
-    //         .navbar-toggler:focus {
-    //             box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) #2f2d35;
-    //         }
-    //     }
-    // }
+            // .navbar-toggler-icon {
+            //     background-image: url(./_img/light-theme-navbar-toggler-icon-bg.png); 
+            // }
+            // .navbar-toggler:focus {
+            //     box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) #2f2d35;
+            // }
+        }
+    }
+
+    @layer section-video-banner {
+        .section-video-banner {
+            a:not(.btn) {
+                color: var(--website-theme-light-col-3b);
+                background-color: var(--website-theme-light-col-2c);
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
 
     // @layer headings {
     //     h1, h2, h3, h4, h5, b {
@@ -97,35 +118,39 @@
     //     }
     // }
 
-    // @layer buttons {
-    //     .btn-primary {
-    //         color: var(--website-clr-col3-f8f);
-    //         background-color: var(--website-clr-col1-300);
-    //         border-color: var(--website-clr-col1-300);
+    @layer buttons {
+        .btn-primary {
+            color: var(--website-theme-light-col-3a);
+            background-color: var(--website-theme-light-col-2a);
+            border-color: var(--website-theme-light-col-3a);
+            border-top-width: 3px;
+            border-right-width: 0px;
+            border-bottom-width: 3px;
+            border-left-width: 0px;
 
-    //         &:hover {
-    //             color: var(--website-clr-dark-col3-f8f);
-    //             background-color: var(--website-clr-col3-ff7);
-    //             border-color: var(--website-clr-col1-300);
-    //         }
-    //     }
-    //     .slick-arrow:not(.slick-disabled), //Settting carousel button as a seondary button
-    //     .btn-secondary {
-    //         color: var(--website-theme-light-text-col);
-    //         background-color: transparent;
-    //         border-color: var(--website-theme-light-headings-col);
+            &:hover {
+                color: var(--website-theme-light-col-1a);
+                background-color: var(--website-theme-light-col-2b);
+                // border-color: var(--website-theme-light-col-3a);
+            }
+        }
+        // .slick-arrow:not(.slick-disabled), //Settting carousel button as a seondary button
+        // .btn-secondary {
+        //     color: var(--website-theme-light-text-col);
+        //     background-color: transparent;
+        //     border-color: var(--website-theme-light-headings-col);
 
-    //         &:hover {
-    //             color: var(--website-theme-light-text-col);
-    //             background-color: var(--website-theme-light-navbar-link-hover);
-    //             border-color: var(--website-theme-light-headings-col);
-    //         }
-    //     }
-    //     .slick-disabled {
-    //         color: var(--website-theme-light-text-col);
-    //         background-color: transparent;
-    //     }
-    // }
+        //     &:hover {
+        //         color: var(--website-theme-light-text-col);
+        //         background-color: var(--website-theme-light-navbar-link-hover);
+        //         border-color: var(--website-theme-light-headings-col);
+        //     }
+        // }
+        // .slick-disabled {
+        //     color: var(--website-theme-light-text-col);
+        //     background-color: transparent;
+        // }
+    }
 
     // @layer banners {
     //     @layer banner-shine {
@@ -266,7 +291,7 @@
 
     @layer footer {
         .global-footer {
-            background-color: var(--website-theme-light-col-2);
+            background-color: var(--website-theme-light-col-3a);
 
             .logo, p, a {
                 color: var(--website-theme-light-col-gray-1);
