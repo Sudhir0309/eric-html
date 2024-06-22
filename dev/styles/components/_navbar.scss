@@ -83,6 +83,8 @@
         }
 
         .nav-link {
+            font-weight: 500;
+
             &:hover {
                 text-decoration: underline;
             }
@@ -90,6 +92,20 @@
             &.active {
                 text-shadow: 0 0 7px var(--website-clr-col1-accent-xx1);
                 text-decoration: underline;
+            }
+
+            &.item-icon-bootstrap {
+                position: relative;
+                font-weight: bold;
+                text-decoration: underline;
+                padding-right: 27px;
+
+                &::after {
+                    position: absolute;
+                    right: 0px;
+                    top: 11px;
+                    font-size: 1.25rem;
+                }
             }
         }
 

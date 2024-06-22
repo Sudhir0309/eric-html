@@ -3,6 +3,7 @@
     --website-secvidbann-orright-flex-dir: column; //Right orientation
     --website-secvidbann-flex-gap: 30px;
     --website-secvidbann-text-padding: 0 12px;
+    --website-secvidbann-text-width: 540px;
     --website-secvidbann-orright-text-padding: 0 12px; //Right orientation
     --website-secvidbann-video-width: 100%;
     --website-secvidbann-vid-height: 420px;
@@ -35,8 +36,9 @@
         &__text {
             flex: 1;
             padding: var(--website-secvidbann-text-padding);
+            max-width: var(--website-secvidbann-text-width);
 
-            border: 10px dashed orange;
+            // border: 1px dashed orange;
 
             p:last-of-type {
                 margin-bottom: 0!important;
@@ -72,7 +74,7 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 10px solid purple;
+            // border: 5px solid purple;
             --website-secvidbann-flex-dir: row;
             --website-secvidbann-flex-gap: 70px;
             --website-secvidbann-text-padding: 0 0 0 43px;
@@ -88,7 +90,7 @@
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 10px solid violet;
+            // border: 5px solid violet;
             --website-secvidbann-flex-dir: row;
             --website-secvidbann-flex-gap: 70px;
             --website-secvidbann-text-padding: 0 0 0 43px;
@@ -104,7 +106,7 @@
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 10px solid lime;
+            // border: 5px solid lime;
             --website-secvidbann-flex-dir: row;
             --website-secvidbann-flex-gap: 70px;
             --website-secvidbann-text-padding: 0 0 0 43px;
@@ -120,17 +122,19 @@
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 10px solid blue;
+            // border: 5px solid blue;
+            --website-secvidbann-text-padding: 0 140px 0 12px;
+            --website-secvidbann-text-width: 720px;
         }
 
-        // Small Medium screens ...
-        @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 10px solid turquoise;
-        }
+        // // Small Medium screens ...
+        // @media (min-width: 576px) and (max-width: (768px - 1)) {
+        //     border: 5px solid turquoise;
+        // }
 
-        // Smaller screens ...
-        @media (max-width: (576px - 1px)) {
-            border: 10px solid chocolate;
-        }
+        // // Smaller screens ...
+        // @media (max-width: (576px - 1px)) {
+        //     border: 5px solid chocolate;
+        // }
     }
 }

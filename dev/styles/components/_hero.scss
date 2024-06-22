@@ -70,7 +70,6 @@
             width: var(--website-hero-deo-width);
             margin-left: auto;
             margin-right: auto;
-            border: 2px solid orange;
 
             .hero-persona {
                 position: relative;
@@ -91,7 +90,8 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 10px solid purple;
+            // border: 10px solid purple;
+            --website-hero-margin: 0 0 120px 0;
             --website-hero-height: 560px;
             --website-hero-deo-width: 530px;
             // speech bubble .. 
@@ -108,7 +108,8 @@
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 10px solid violet;
+            // border: 10px solid violet;
+            --website-hero-margin: 0 0 120px 0;
             --website-hero-height: 560px;
             --website-hero-deo-width: 530px;
             // speech bubble .. 
@@ -125,7 +126,8 @@
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 10px solid lime;
+            // border: 10px solid lime;
+            --website-hero-margin: 0 0 70px 0;
             --website-hero-height: 430px;
             --website-hero-deo-width: 400px;
             // speech bubble ..
@@ -136,7 +138,8 @@
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 10px solid blue;
+            // border: 10px solid blue;
+            --website-hero-margin: 0 0 50px 0;
             --website-hero-height: 430px;
             --website-hero-deo-width: 400px;
             // speech bubble ..
@@ -146,12 +149,12 @@
 
         // // Small Medium screens ...
         // @media (min-width: 576px) and (max-width: (768px - 1)) {
-        //     border: 10px solid turquoise;
+        //     // border: 10px solid turquoise;
         // }
 
         // // Smaller screens ...
         // @media (max-width: (576px - 1px)) {
-        //     border: 10px solid chocolate;
+        //     // border: 10px solid chocolate;
         // }
     }
 }

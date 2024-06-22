@@ -4,20 +4,29 @@
  * @param {*} navId 
  */
 export function setupScrolltopBtn(btnId, pageYOffset) {
-    const scrollTopButton = document.getElementById(btnId);
+    const btnDomElt = document.getElementById(btnId);
+
+    // 1st check
+    toggleVisibility(btnDomElt, pageYOffset);
 
     window.addEventListener('scroll', function() {
-        if (window.pageYOffset > pageYOffset) { // Show the button after scrolling down 300px
-            scrollTopButton.style.display = 'block';
-        } else {
-            scrollTopButton.style.display = 'none';
-        }
+        toggleVisibility(btnDomElt, pageYOffset);
     });
   
-    scrollTopButton.addEventListener('click', function() {
+    btnDomElt.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
+}
+
+
+
+function toggleVisibility(btnElt, pageYOffset) {
+    if (window.pageYOffset > pageYOffset) { // Show the button after scrolling down 300px
+        btnElt.style.display = 'block';
+    } else {
+        btnElt.style.display = 'none';
+    }
 }

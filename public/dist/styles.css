@@ -11450,7 +11450,6 @@
       width: var(--website-hero-deo-width);
       margin-left: auto;
       margin-right: auto;
-      border: 2px solid orange;
     }
     .hero .hero-decoration .hero-persona {
       position: relative;
@@ -11469,7 +11468,7 @@
     }
     @media (min-width: 1400px) {
       .hero {
-        border: 10px solid purple;
+        --website-hero-margin: 0 0 120px 0;
         --website-hero-height: 560px;
         --website-hero-deo-width: 530px;
         --website-hero-spbubble-p-fsize: 1.3rem;
@@ -11484,7 +11483,7 @@
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .hero {
-        border: 10px solid violet;
+        --website-hero-margin: 0 0 120px 0;
         --website-hero-height: 560px;
         --website-hero-deo-width: 530px;
         --website-hero-spbubble-p-fsize: 1.3rem;
@@ -11499,7 +11498,7 @@
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .hero {
-        border: 10px solid lime;
+        --website-hero-margin: 0 0 70px 0;
         --website-hero-height: 430px;
         --website-hero-deo-width: 400px;
         --website-hero-spbubble-left: 30%;
@@ -11509,7 +11508,7 @@
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .hero {
-        border: 10px solid blue;
+        --website-hero-margin: 0 0 50px 0;
         --website-hero-height: 430px;
         --website-hero-deo-width: 400px;
         --website-hero-spbubble-left: 30%;
@@ -11596,12 +11595,27 @@
     .navbar .nav-item:last-of-type::after {
       display: none;
     }
+    .navbar .nav-link {
+      font-weight: 500;
+    }
     .navbar .nav-link:hover {
       text-decoration: underline;
     }
     .navbar .nav-link.active {
       text-shadow: 0 0 7px var(--website-clr-col1-accent-xx1);
       text-decoration: underline;
+    }
+    .navbar .nav-link.item-icon-bootstrap {
+      position: relative;
+      font-weight: bold;
+      text-decoration: underline;
+      padding-right: 27px;
+    }
+    .navbar .nav-link.item-icon-bootstrap::after {
+      position: absolute;
+      right: 0px;
+      top: 11px;
+      font-size: 1.25rem;
     }
     .navbar .navbar-brand {
       font-size: 1.6rem;
@@ -11618,7 +11632,7 @@
    *
   **/
   :root {
-    --website-anchors-scrollto-top: -120px;
+    --website-anchors-scrollto-top: -80px;
     --website-btnscrolltop-padding: 5px 10px;
     --website-btnscrolltop-font-size: 0.8rem;
     --website-btnscrolltop-right: 10px;
@@ -11631,6 +11645,30 @@
     .anchors-scrollto {
       position: absolute;
       top: var(--website-anchors-scrollto-top);
+      display: block;
+      width: 100px;
+      height: 20px;
+    }
+    @media (min-width: 1400px) {
+      .anchors-scrollto {
+        --website-anchors-scrollto-top: -160px;
+        --website-btnscrolltop-right: 30px;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .anchors-scrollto {
+        --website-anchors-scrollto-top: -160px;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .anchors-scrollto {
+        --website-anchors-scrollto-top: -140px;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .anchors-scrollto {
+        --website-anchors-scrollto-top: -130px;
+      }
     }
   }
   @layer btn-scroll-top {
@@ -11647,7 +11685,6 @@
     }
     @media (min-width: 1400px) {
       .btn-scroll-top {
-        border: 10px solid purple;
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
@@ -11655,7 +11692,6 @@
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .btn-scroll-top {
-        border: 10px solid violet;
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
@@ -11663,7 +11699,6 @@
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .btn-scroll-top {
-        border: 10px solid lime;
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
@@ -11671,20 +11706,9 @@
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .btn-scroll-top {
-        border: 10px solid blue;
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
-      }
-    }
-    @media (min-width: 576px) and (max-width: 767px) {
-      .btn-scroll-top {
-        border: 10px solid turquoise;
-      }
-    }
-    @media (max-width: 575px) {
-      .btn-scroll-top {
-        border: 10px solid chocolate;
       }
     }
   }
@@ -11718,6 +11742,7 @@
     --website-secvidbann-orright-flex-dir: column;
     --website-secvidbann-flex-gap: 30px;
     --website-secvidbann-text-padding: 0 12px;
+    --website-secvidbann-text-width: 540px;
     --website-secvidbann-orright-text-padding: 0 12px;
     --website-secvidbann-video-width: 100%;
     --website-secvidbann-vid-height: 420px;
@@ -11743,7 +11768,7 @@
     .section-video-banner__text {
       flex: 1;
       padding: var(--website-secvidbann-text-padding);
-      border: 10px dashed orange;
+      max-width: var(--website-secvidbann-text-width);
     }
     .section-video-banner__text p:last-of-type {
       margin-bottom: 0 !important;
@@ -11769,7 +11794,6 @@
     }
     @media (min-width: 1400px) {
       .section-video-banner {
-        border: 10px solid purple;
         --website-secvidbann-flex-dir: row;
         --website-secvidbann-flex-gap: 70px;
         --website-secvidbann-text-padding: 0 0 0 43px;
@@ -11783,7 +11807,6 @@
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .section-video-banner {
-        border: 10px solid violet;
         --website-secvidbann-flex-dir: row;
         --website-secvidbann-flex-gap: 70px;
         --website-secvidbann-text-padding: 0 0 0 43px;
@@ -11797,7 +11820,6 @@
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .section-video-banner {
-        border: 10px solid lime;
         --website-secvidbann-flex-dir: row;
         --website-secvidbann-flex-gap: 70px;
         --website-secvidbann-text-padding: 0 0 0 43px;
@@ -11811,17 +11833,8 @@
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .section-video-banner {
-        border: 10px solid blue;
-      }
-    }
-    @media (min-width: 576px) and (max-width: 767px) {
-      .section-video-banner {
-        border: 10px solid turquoise;
-      }
-    }
-    @media (max-width: 575px) {
-      .section-video-banner {
-        border: 10px solid chocolate;
+        --website-secvidbann-text-padding: 0 140px 0 12px;
+        --website-secvidbann-text-width: 720px;
       }
     }
   }
@@ -11927,6 +11940,7 @@
     --website-theme-light-col-3a: #080806;
     --website-theme-light-col-3b: #262200;
     --website-theme-light-col-3c: #4A4834;
+    --website-theme-light-col-4a: #004ee5;
     --website-theme-light-col-gray-1: #E3E1CC;
     --website-theme-light-col-gray-2: #B0AE9E;
     --website-theme-light-col-gray-3: #aaa;
@@ -11965,6 +11979,9 @@
     }
     .navbar .nav-item::after {
       background-color: var(--website-theme-light-col-gray-3);
+    }
+    .navbar .nav-link.item-icon-bootstrap {
+      color: var(--website-theme-light-col-4a);
     }
   }
   @layer section-video-banner {

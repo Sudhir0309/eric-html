@@ -8,6 +8,7 @@
     --website-theme-light-col-3a: #080806;
     --website-theme-light-col-3b: #262200;
     --website-theme-light-col-3c: #4A4834;
+    --website-theme-light-col-4a: #004ee5;
     --website-theme-light-col-gray-1: #E3E1CC;
     --website-theme-light-col-gray-2: #B0AE9E;
     --website-theme-light-col-gray-3: #aaa;
@@ -60,6 +61,12 @@
                 // separator between links
                 &::after { 
                     background-color: var(--website-theme-light-col-gray-3);
+                }
+            }
+
+            .nav-link {
+                &.item-icon-bootstrap {
+                    color: var(--website-theme-light-col-4a);
                 }
             }
         }
