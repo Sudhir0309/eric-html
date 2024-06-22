@@ -97,8 +97,13 @@
             &.item-icon-bootstrap {
                 position: relative;
                 font-weight: bold;
+                display: inline-block;
                 text-decoration: underline;
                 padding-right: 27px;
+
+                &:hover {
+                    text-decoration: none;
+                }
 
                 &::after {
                     position: absolute;

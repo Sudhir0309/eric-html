@@ -34,7 +34,6 @@
         @media (min-width: 1400px) {
             // border: 4px dashed purple;
             --website-anchors-scrollto-top: -160px;
-            --website-btnscrolltop-right: 30px;
         }
         
         // Large screens ...
@@ -88,6 +87,7 @@
             --website-btnscrolltop-padding: 10px 45px 10px 20px;
             --website-btnscrolltop-font-size: 1.2rem;
             --website-btnscrolltop-arrowdisplay: block;
+            --website-btnscrolltop-right: 50px;
         }
         
         // Large screens ...
@@ -96,6 +96,7 @@
             --website-btnscrolltop-padding: 10px 45px 10px 20px;
             --website-btnscrolltop-font-size: 1.2rem;
             --website-btnscrolltop-arrowdisplay: block;
+            --website-btnscrolltop-right: 90px;
         }
         
         // Large Medium screens ...
@@ -104,6 +105,7 @@
             --website-btnscrolltop-padding: 10px 45px 10px 20px;
             --website-btnscrolltop-font-size: 1.2rem;
             --website-btnscrolltop-arrowdisplay: block;
+            --website-btnscrolltop-right: 90px;
         }
 
         // Medium Medium screens ...

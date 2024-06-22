@@ -11608,8 +11608,12 @@
     .navbar .nav-link.item-icon-bootstrap {
       position: relative;
       font-weight: bold;
+      display: inline-block;
       text-decoration: underline;
       padding-right: 27px;
+    }
+    .navbar .nav-link.item-icon-bootstrap:hover {
+      text-decoration: none;
     }
     .navbar .nav-link.item-icon-bootstrap::after {
       position: absolute;
@@ -11652,7 +11656,6 @@
     @media (min-width: 1400px) {
       .anchors-scrollto {
         --website-anchors-scrollto-top: -160px;
-        --website-btnscrolltop-right: 30px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
@@ -11688,6 +11691,7 @@
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
+        --website-btnscrolltop-right: 50px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
@@ -11695,6 +11699,7 @@
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
+        --website-btnscrolltop-right: 90px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -11702,6 +11707,7 @@
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
+        --website-btnscrolltop-right: 90px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
@@ -11982,6 +11988,9 @@
     }
     .navbar .nav-link.item-icon-bootstrap {
       color: var(--website-theme-light-col-4a);
+    }
+    .navbar .nav-link.item-icon-bootstrap:hover {
+      color: var(--website-theme-light-col-3b);
     }
   }
   @layer section-video-banner {

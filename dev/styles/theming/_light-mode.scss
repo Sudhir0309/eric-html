@@ -67,6 +67,10 @@
             .nav-link {
                 &.item-icon-bootstrap {
                     color: var(--website-theme-light-col-4a);
+
+                    &:hover {
+                        color: var(--website-theme-light-col-3b);
+                    }
                 }
             }
         }
