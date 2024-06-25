@@ -3,6 +3,7 @@
 import { handleViewportChange as handleViewportChange } from './videoBannerAccessibility.js';
 import { setElementSticky as setElementSticky } from './sticky-nav.js';
 import { setupScrolltopBtn as setupScrolltopBtn } from './scroll-top-btn.js';
+import { setupChatbotBtn as setupChatbotBtn } from './chatbot.js'
 
 
 
@@ -18,15 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
   mediaQuery.addListener(handleViewportChange);
 
 
-  /**
-   * Set main navigation sticky
-   */
+  // Setting up sticky nav ...
   setElementSticky('main-nav');
 
-  /**
-   * 
-   */
+  // Setting up scrolltop button ...
   setupScrolltopBtn('scroll-top-button', 300);
+
+  // Setting chatbot trigger ...
+  setupChatbotBtn();
 });
 
 

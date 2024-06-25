@@ -4,16 +4,22 @@
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
     --website-theme-light-col-2b1: #756900;
+    --website-theme-light-col-2d: #959572;
     --website-theme-light-col-2c: #fff7b0;
+    --website-theme-light-col-2d: #EAEACE;
     --website-theme-light-col-3a: #080806;
     --website-theme-light-col-3b: #262200;
     --website-theme-light-col-3c: #4A4834;
     --website-theme-light-col-4a: #004ee5;
+    --website-theme-light-col-5a: #b31e7f;
+    --website-theme-light-col-5b: #e151af;
     --website-theme-light-col-gray-1: #E3E1CC;
     --website-theme-light-col-gray-2: #B0AE9E;
     --website-theme-light-col-gray-3: #aaa;
 
     --website-theme-light-headings-col: var(--website-theme-light-col-3b);
+
+    --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-2d);
 }
 
 // html[data-theme="light"] {
@@ -48,6 +54,17 @@
     @layer navbar {
         .navbar {
             background-color: var(--website-theme-light-col-1a);
+            
+            .container {
+                // bottom border
+                &::after {
+                    background-color: var(--website-theme-light-col-2b1);
+                }
+            }
+
+            .navbar-collapse {
+                background-color: var(--website-theme-light-navbar-collapse-bgcol);
+            }
 
             .navbar-brand, .nav-link {
                 color: var(--website-theme-light-col-3c);
@@ -65,13 +82,47 @@
             }
 
             .nav-link {
-                &.item-icon-bootstrap {
-                    color: var(--website-theme-light-col-4a);
-
+                &.item-icon-material {
+                    color: var(--website-theme-light-col-5a);
+ 
                     &:hover {
                         color: var(--website-theme-light-col-3b);
                     }
                 }
+            }
+
+
+            // Extra Large screens ...
+            @media (min-width: 1400px) {
+                // border: 10px solid purple;
+                --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
+            }
+            
+            // Large screens ...
+            @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+                // border: 10px solid violet;
+                --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
+            }
+            
+            // Large Medium screens ...
+            @media (min-width: 992px) and (max-width: (1200px - 1)) {
+                // border: 10px solid lime;
+                --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
+            }
+
+            // Medium Medium screens ...
+            @media (min-width: 768px) and (max-width: (992px - 1)) {
+                // border: 10px solid blue;
+            }
+
+            // Small Medium screens ...
+            @media (min-width: 576px) and (max-width: (768px - 1)) {
+                // border: 10px solid turquoise;
+            }
+
+            // Smaller screens ...
+            @media (max-width: (576px - 1px)) {
+                // border: 10px solid chocolate;
             }
         }
     }

@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./dev/js/chatbot.js":
+/*!***************************!*\
+  !*** ./dev/js/chatbot.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   setupChatbotBtn: () => (/* binding */ setupChatbotBtn)\n/* harmony export */ });\n/**\n * Open chatbox through a custom button\n * https://help.tidio.com/\n */\nfunction setupChatbotBtn() {\n  if (window.tidioChatApi) {\n    window.tidioChatApi.on(\"ready\", onTidioChatApiReady);\n  }\n  document.querySelector(\".js-chat-button\").addEventListener(\"click\", function (event) {\n    event.preventDefault(); // Prevent the default behavior\n    if (window.tidioChatApi) {\n      window.tidioChatApi.show();\n      window.tidioChatApi.open();\n    } else {\n      console.info('tidioChatApi is undefined!');\n    }\n  });\n}\nfunction onTidioChatApiReady() {\n  window.tidioChatApi.hide();\n}\n\n//# sourceURL=webpack://Eric_Njanga_2024/./dev/js/chatbot.js?");
+
+/***/ }),
+
 /***/ "./dev/js/main.js":
 /*!************************!*\
   !*** ./dev/js/main.js ***!
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _videoBannerAccessibility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./videoBannerAccessibility.js */ \"./dev/js/videoBannerAccessibility.js\");\n/* harmony import */ var _sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sticky-nav.js */ \"./dev/js/sticky-nav.js\");\n/* harmony import */ var _scroll_top_btn_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scroll-top-btn.js */ \"./dev/js/scroll-top-btn.js\");\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var mediaQuery = window.matchMedia('(min-width: 992px)');\n\n  /**\n   * Hide/reveal DOM elements to accessible technologies based on media queries\n   */\n  // 1) Initial check\n  (0,_videoBannerAccessibility_js__WEBPACK_IMPORTED_MODULE_0__.handleViewportChange)(mediaQuery);\n  // 2) Listen for changes in the viewport width\n  mediaQuery.addListener(_videoBannerAccessibility_js__WEBPACK_IMPORTED_MODULE_0__.handleViewportChange);\n\n  /**\n   * Set main navigation sticky\n   */\n  (0,_sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__.setElementSticky)('main-nav');\n\n  /**\n   * \n   */\n  (0,_scroll_top_btn_js__WEBPACK_IMPORTED_MODULE_2__.setupScrolltopBtn)('scroll-top-button', 300);\n});\n\n//# sourceURL=webpack://Eric_Njanga_2024/./dev/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _videoBannerAccessibility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./videoBannerAccessibility.js */ \"./dev/js/videoBannerAccessibility.js\");\n/* harmony import */ var _sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sticky-nav.js */ \"./dev/js/sticky-nav.js\");\n/* harmony import */ var _scroll_top_btn_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scroll-top-btn.js */ \"./dev/js/scroll-top-btn.js\");\n/* harmony import */ var _chatbot_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chatbot.js */ \"./dev/js/chatbot.js\");\n\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var mediaQuery = window.matchMedia('(min-width: 992px)');\n\n  /**\n   * Hide/reveal DOM elements to accessible technologies based on media queries\n   */\n  // 1) Initial check\n  (0,_videoBannerAccessibility_js__WEBPACK_IMPORTED_MODULE_0__.handleViewportChange)(mediaQuery);\n  // 2) Listen for changes in the viewport width\n  mediaQuery.addListener(_videoBannerAccessibility_js__WEBPACK_IMPORTED_MODULE_0__.handleViewportChange);\n\n  // Setting up sticky nav ...\n  (0,_sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__.setElementSticky)('main-nav');\n\n  // Setting up scrolltop button ...\n  (0,_scroll_top_btn_js__WEBPACK_IMPORTED_MODULE_2__.setupScrolltopBtn)('scroll-top-button', 300);\n\n  // Setting chatbot trigger ...\n  (0,_chatbot_js__WEBPACK_IMPORTED_MODULE_3__.setupChatbotBtn)();\n});\n\n//# sourceURL=webpack://Eric_Njanga_2024/./dev/js/main.js?");
 
 /***/ }),
 

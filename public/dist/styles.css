@@ -11246,6 +11246,9 @@
       height: 16px;
       width: 16px;
     }
+    .item-icon-material-before.chat-bubble::before {
+      content: "\e0b7";
+    }
     .item-icon-material-before.arrow-up::before {
       content: "\e5d8";
     }
@@ -11263,6 +11266,9 @@
     }
     .item-icon-material-before.arrow-forward::before {
       content: "\e5e1";
+    }
+    .item-icon-material-after.chat-bubble::after {
+      content: "\e0b7";
     }
     .item-icon-material-after.arrow-up::after {
       content: "\e5d8";
@@ -11535,11 +11541,13 @@
     }
   }
   :root {
+    --website-navbar-logo-width: 140px;
     --website-navbar-margin: 0;
     --website-navbar-gap: 0;
     --website-navbar-padding: 0;
     --website-navbar-navitem-sep-display: none;
     --website-navbar-navitem-sep-right: -12px;
+    --webite-navbar-collapse-padding: 15px 0;
   }
   @layer navbar {
     .navbar {
@@ -11547,34 +11555,55 @@
     }
     @media (min-width: 1400px) {
       .navbar {
+        --website-navbar-logo-width: 160px;
         --website-navbar-margin: 0 auto;
         --website-navbar-padding: 10px 0;
         --website-navbar-navitem-sep-display: block;
         --website-navbar-gap: 30px;
         --website-navbar-navitem-sep-right: -18px;
+        --webite-navbar-collapse-padding: 0;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .navbar {
+        --website-navbar-logo-width: 140px;
         --website-navbar-margin: 0 auto;
         --website-navbar-padding: 10px 0;
         --website-navbar-navitem-sep-display: block;
         --website-navbar-gap: 30px;
         --website-navbar-navitem-sep-right: -18px;
+        --webite-navbar-collapse-padding: 0;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .navbar {
+        --website-navbar-logo-width: 140px;
         --website-navbar-margin: 0 auto;
         --website-navbar-padding: 10px 0;
         --website-navbar-navitem-sep-display: block;
         --website-navbar-gap: 20px;
+        --webite-navbar-collapse-padding: 0;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .navbar {
         --website-navbar-padding: 10px 0;
       }
+    }
+    .navbar .container {
+      position: relative;
+    }
+    .navbar .container::after {
+      position: absolute;
+      left: 11px;
+      bottom: 0px;
+      content: "";
+      height: 1px;
+      width: calc(100% - 24px);
+    }
+    .navbar .navbar-collapse {
+      text-align: center;
+      padding: var(--webite-navbar-collapse-padding);
     }
     .navbar .navbar-nav {
       gap: var(--website-navbar-gap);
@@ -11605,24 +11634,25 @@
       text-shadow: 0 0 7px var(--website-clr-col1-accent-xx1);
       text-decoration: underline;
     }
-    .navbar .nav-link.item-icon-bootstrap {
+    .navbar .nav-link.item-icon-material {
       position: relative;
       font-weight: bold;
       display: inline-block;
-      text-decoration: underline;
-      padding-right: 27px;
-    }
-    .navbar .nav-link.item-icon-bootstrap:hover {
       text-decoration: none;
+      padding-right: 22px;
     }
-    .navbar .nav-link.item-icon-bootstrap::after {
+    .navbar .nav-link.item-icon-material:hover {
+      text-decoration: underline;
+    }
+    .navbar .nav-link.item-icon-material::after {
       position: absolute;
+      left: unset;
       right: 0px;
-      top: 11px;
-      font-size: 1.25rem;
+      top: 5px;
     }
-    .navbar .navbar-brand {
-      font-size: 1.6rem;
+    .navbar .navbar-brand img {
+      width: var(--website-navbar-logo-width);
+      height: inherit;
     }
     .navbar .navbar-brand:hover {
       text-decoration: underline;
@@ -11848,10 +11878,7 @@
     --website-footer-padding: 60px 0;
     --website-footer-text-wrapper-gap: 20px;
     --website-footer-text-wrapper-width: 480px;
-    --website-footer-logo-fontsize: 1.5rem;
-    --website-footer-logo-padding: 0 30px 0 0;
-    --website-footer-logo-icon-fontsize: 1.3rem;
-    --website-footer-logo-icon-top: 7px;
+    --website-footer-logo-width: 184.24px;
   }
   @layer footer {
     .global-footer {
@@ -11866,14 +11893,10 @@
     }
     .global-footer .logo {
       position: relative;
-      padding: var(--website-footer-logo-padding);
-      font-size: var(--website-footer-logo-fontsize);
     }
-    .global-footer .logo::after {
-      position: absolute;
-      top: var(--website-footer-logo-icon-top);
-      right: 0;
-      font-size: var(--website-footer-logo-icon-fontsize);
+    .global-footer .logo img {
+      width: var(--website-footer-logo-width);
+      height: inherit;
     }
     .global-footer .logo:hover, .global-footer a:hover {
       text-decoration: none;
@@ -11888,7 +11911,7 @@
     .global-footer .footer-items-list a {
       position: relative;
       display: inline-block;
-      padding-left: 30px;
+      padding-left: 27px;
     }
     .global-footer .footer-items-list a::before {
       position: absolute;
@@ -11896,36 +11919,30 @@
       left: 0;
       font-size: 1.3rem;
     }
+    .global-footer .footer-items-list .item-icon-bootstrap::before {
+      top: 6px;
+      font-size: 1.05rem;
+    }
     .global-footer .copyright {
       font-size: 0.8rem;
     }
     @media (min-width: 1400px) {
       .global-footer {
         --website-footer-text-wrapper-gap: 30px;
-        --website-footer-logo-fontsize: 2rem;
-        --website-footer-logo-icon-fontsize: 1.5rem;
-        --website-footer-logo-icon-top: 9px;
-        --website-footer-logo-padding: 0 37px 0 0;
+        --website-footer-logo-width: 263.48px;
         --website-footer-padding: 100px 0;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .global-footer {
         --website-footer-text-wrapper-gap: 30px;
-        --website-footer-logo-fontsize: 2rem;
-        --website-footer-logo-icon-fontsize: 1.5rem;
-        --website-footer-logo-icon-top: 9px;
-        --website-footer-logo-padding: 0 37px 0 0;
+        --website-footer-logo-width: 263.48px;
         --website-footer-padding: 100px 0;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .global-footer {
         --website-footer-text-wrapper-gap: 30px;
-        --website-footer-logo-fontsize: 2rem;
-        --website-footer-logo-icon-fontsize: 1.5rem;
-        --website-footer-logo-icon-top: 9px;
-        --website-footer-logo-padding: 0 37px 0 0;
         --website-footer-padding: 100px 0;
       }
     }
@@ -11942,15 +11959,20 @@
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
     --website-theme-light-col-2b1: #756900;
+    --website-theme-light-col-2d: #959572;
     --website-theme-light-col-2c: #fff7b0;
+    --website-theme-light-col-2d: #EAEACE;
     --website-theme-light-col-3a: #080806;
     --website-theme-light-col-3b: #262200;
     --website-theme-light-col-3c: #4A4834;
     --website-theme-light-col-4a: #004ee5;
+    --website-theme-light-col-5a: #b31e7f;
+    --website-theme-light-col-5b: #e151af;
     --website-theme-light-col-gray-1: #E3E1CC;
     --website-theme-light-col-gray-2: #B0AE9E;
     --website-theme-light-col-gray-3: #aaa;
     --website-theme-light-headings-col: var(--website-theme-light-col-3b);
+    --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-2d);
   }
   body {
     background-color: var(--website-theme-light-col-1a);
@@ -11977,6 +11999,12 @@
     .navbar {
       background-color: var(--website-theme-light-col-1a);
     }
+    .navbar .container::after {
+      background-color: var(--website-theme-light-col-2b1);
+    }
+    .navbar .navbar-collapse {
+      background-color: var(--website-theme-light-navbar-collapse-bgcol);
+    }
     .navbar .navbar-brand, .navbar .nav-link {
       color: var(--website-theme-light-col-3c);
     }
@@ -11986,11 +12014,26 @@
     .navbar .nav-item::after {
       background-color: var(--website-theme-light-col-gray-3);
     }
-    .navbar .nav-link.item-icon-bootstrap {
-      color: var(--website-theme-light-col-4a);
+    .navbar .nav-link.item-icon-material {
+      color: var(--website-theme-light-col-5a);
     }
-    .navbar .nav-link.item-icon-bootstrap:hover {
+    .navbar .nav-link.item-icon-material:hover {
       color: var(--website-theme-light-col-3b);
+    }
+    @media (min-width: 1400px) {
+      .navbar {
+        --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .navbar {
+        --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .navbar {
+        --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
+      }
     }
   }
   @layer section-video-banner {

@@ -153,6 +153,11 @@
         }
 
         &-before {
+            &.chat-bubble {
+                &::before {
+                    content: "\e0b7";
+                } 
+            }
             &.arrow-up {
                 &::before {
                     content: "\e5d8";
@@ -186,6 +191,11 @@
         }
 
         &-after {
+            &.chat-bubble {
+                &::after {
+                    content: "\e0b7";
+                } 
+            }
             &.arrow-up {
                 &::after {
                     content: "\e5d8";
