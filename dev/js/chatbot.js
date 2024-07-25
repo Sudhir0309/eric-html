@@ -2,7 +2,7 @@
  * Open chatbox through a custom button
  * https://help.tidio.com/
  */
-export function setupChatbotBtn() {
+export function setupChatbotFct() {
     if (window.tidioChatApi) {
         window.tidioChatApi.on("ready", onTidioChatApiReady);
     }
